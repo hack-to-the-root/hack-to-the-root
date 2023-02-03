@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="h4ck 2 the /root"
-run/main_scene="res://scenes/mainmenu.tscn"
+run/main_scene="res://scenes/mainmenu/mainmenu.tscn"
 config/icon="res://icon.png"
 
 [display]
