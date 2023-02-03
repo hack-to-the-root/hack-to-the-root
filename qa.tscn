@@ -1,19 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://bn7sxevgl7kuj"]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource type="Script" path="res://qa_input.gd" id="1_07mka"]
+[ext_resource path="res://qa.gd" type="Script" id=1]
 
 [node name="qa" type="Node2D"]
-script = ExtResource("1_07mka")
+script = ExtResource( 1 )
 
-[node name="question" type="Label" parent="."]
-offset_left = 206.0
-offset_top = 103.0
-offset_right = 936.0
-offset_bottom = 225.0
-text = "What's the answer?"
+[node name="question" type="RichTextLabel" parent="."]
+margin_left = 298.0
+margin_top = 120.0
+margin_right = 771.0
+margin_bottom = 258.0
+text = "What is the answer?"
 
 [node name="answer" type="LineEdit" parent="."]
-offset_left = 174.0
-offset_top = 350.0
-offset_right = 997.0
-offset_bottom = 538.0
+margin_left = 231.0
+margin_top = 328.0
+margin_right = 812.0
+margin_bottom = 480.0
