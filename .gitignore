@@ -8,3 +8,6 @@ data_*/
 
 # Export dir
 /dist
+
+# Release artifact
+/hack-to-the-root-ggj2022.zip
