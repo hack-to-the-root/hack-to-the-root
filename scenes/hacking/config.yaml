@@ -1,0 +1,6 @@
+---
+- question: What is the answer?
+  type: qa
+  answer: 42
+- type: regex
+  regex: /f[o]{2}bar/
