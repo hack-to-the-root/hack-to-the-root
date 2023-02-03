@@ -11,12 +11,18 @@ config_version=4
 [application]
 
 config/name="h4ck 2 the /root"
-run/main_scene="res://qa.tscn"
+run/main_scene="res://scenes/mainmenu.tscn"
 config/icon="res://icon.png"
 
 [display]
 
 window/stretch/mode="2d"
+window/size/width=1280
+window/size/height=720
+
+[gdnative]
+
+singletons=[  ]
 
 [gui]
 
