@@ -14,8 +14,8 @@ margin_bottom = 720.0
 alignment = 1
 
 [node name="ControlsContainer" type="VBoxContainer" parent="RootContainer/HBoxContainer"]
-margin_left = 190.0
-margin_right = 448.0
+margin_left = 214.0
+margin_right = 522.0
 margin_bottom = 720.0
 rect_min_size = Vector2( 258, 0 )
 size_flags_horizontal = 6
@@ -23,31 +23,29 @@ alignment = 1
 
 [node name="StartButton" type="Button" parent="RootContainer/HBoxContainer/ControlsContainer"]
 margin_top = 326.0
-margin_right = 258.0
+margin_right = 308.0
 margin_bottom = 346.0
 text = "Start Game"
 
 [node name="HelpButton" type="Button" parent="RootContainer/HBoxContainer/ControlsContainer"]
 margin_top = 350.0
-margin_right = 258.0
+margin_right = 308.0
 margin_bottom = 370.0
 text = "Help"
 
 [node name="ExitButton" type="Button" parent="RootContainer/HBoxContainer/ControlsContainer"]
 margin_top = 374.0
-margin_right = 258.0
+margin_right = 308.0
 margin_bottom = 394.0
 text = "Exit"
 
-[node name="LogoContainer" type="VBoxContainer" parent="RootContainer/HBoxContainer"]
-margin_left = 833.0
-margin_right = 1089.0
-margin_bottom = 720.0
-size_flags_horizontal = 6
-alignment = 1
+[node name="LogoContainer" type="Node2D" parent="RootContainer/HBoxContainer"]
+scale = Vector2( 0.5, 0.5 )
 
 [node name="LogoRect" type="TextureRect" parent="RootContainer/HBoxContainer/LogoContainer"]
-margin_top = 232.0
-margin_right = 256.0
-margin_bottom = 488.0
+margin_left = 1404.0
+margin_top = 180.0
+margin_right = 2428.0
+margin_bottom = 1204.0
 texture = ExtResource( 1 )
+stretch_mode = 5
