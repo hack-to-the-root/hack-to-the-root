@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/overworld/ServerButton.gd" type="Script" id=1]
+[ext_resource path="res://scenes/overworld/overworld.gd" type="Script" id=2]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 1280.0
@@ -10,29 +12,29 @@ margin_bottom = 720.0
 
 [node name="GUI" type="MarginContainer" parent="VBoxContainer"]
 margin_right = 1280.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 
 [node name="GUIContainer" type="HBoxContainer" parent="VBoxContainer/GUI"]
 margin_right = 1280.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 
 [node name="StatsContainer" type="HBoxContainer" parent="VBoxContainer/GUI/GUIContainer"]
-margin_right = 1072.0
-margin_bottom = 40.0
+margin_right = 534.0
+margin_bottom = 44.0
 size_flags_horizontal = 3
 
 [node name="MoneyContainer" type="HBoxContainer" parent="VBoxContainer/GUI/GUIContainer/StatsContainer"]
 margin_right = 100.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 
 [node name="Money" type="MarginContainer" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/MoneyContainer"]
 margin_right = 100.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 rect_min_size = Vector2( 100, 40 )
 
 [node name="Background" type="NinePatchRect" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/MoneyContainer/Money"]
 margin_right = 100.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 
 [node name="Label" type="RichTextLabel" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/MoneyContainer/Money/Background"]
 margin_right = 50.0
@@ -48,16 +50,16 @@ text = "10"
 [node name="LevelContainer" type="HBoxContainer" parent="VBoxContainer/GUI/GUIContainer/StatsContainer"]
 margin_left = 104.0
 margin_right = 204.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 
 [node name="Level" type="MarginContainer" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/LevelContainer"]
 margin_right = 100.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 rect_min_size = Vector2( 100, 40 )
 
 [node name="Background" type="NinePatchRect" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/LevelContainer/Level"]
 margin_right = 100.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 
 [node name="Label" type="RichTextLabel" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/LevelContainer/Level/Background"]
 margin_right = 50.0
@@ -70,23 +72,92 @@ margin_right = 100.0
 margin_bottom = 40.0
 text = "10"
 
+[node name="CheatContainer" type="HBoxContainer" parent="VBoxContainer/GUI/GUIContainer"]
+margin_left = 538.0
+margin_right = 1072.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+
+[node name="MoneyCheatContainer" type="VBoxContainer" parent="VBoxContainer/GUI/GUIContainer/CheatContainer"]
+margin_right = 48.0
+margin_bottom = 44.0
+
+[node name="AddMoneyButton" type="Button" parent="VBoxContainer/GUI/GUIContainer/CheatContainer/MoneyCheatContainer"]
+margin_right = 48.0
+margin_bottom = 20.0
+text = "+ $$$"
+
+[node name="RemoveMoneyButton" type="Button" parent="VBoxContainer/GUI/GUIContainer/CheatContainer/MoneyCheatContainer"]
+margin_top = 24.0
+margin_right = 48.0
+margin_bottom = 44.0
+text = "- $$$"
+
+[node name="LevelCheatContainer2" type="VBoxContainer" parent="VBoxContainer/GUI/GUIContainer/CheatContainer"]
+margin_left = 52.0
+margin_right = 94.0
+margin_bottom = 44.0
+
+[node name="AddLevelButton" type="Button" parent="VBoxContainer/GUI/GUIContainer/CheatContainer/LevelCheatContainer2"]
+margin_right = 42.0
+margin_bottom = 20.0
+text = "+ Lvl"
+
+[node name="RemoveLevelButton" type="Button" parent="VBoxContainer/GUI/GUIContainer/CheatContainer/LevelCheatContainer2"]
+margin_top = 24.0
+margin_right = 42.0
+margin_bottom = 44.0
+text = "- Lvl"
+
+[node name="PizzaCheatContainer" type="VBoxContainer" parent="VBoxContainer/GUI/GUIContainer/CheatContainer"]
+margin_left = 98.0
+margin_right = 155.0
+margin_bottom = 44.0
+
+[node name="AddPizzaButton" type="Button" parent="VBoxContainer/GUI/GUIContainer/CheatContainer/PizzaCheatContainer"]
+margin_right = 57.0
+margin_bottom = 20.0
+text = "+ Pizza"
+
+[node name="RemovePizzaButton" type="Button" parent="VBoxContainer/GUI/GUIContainer/CheatContainer/PizzaCheatContainer"]
+margin_top = 24.0
+margin_right = 57.0
+margin_bottom = 44.0
+text = "- Pizza"
+
+[node name="CoffeeCheatContainer" type="VBoxContainer" parent="VBoxContainer/GUI/GUIContainer/CheatContainer"]
+margin_left = 159.0
+margin_right = 223.0
+margin_bottom = 44.0
+
+[node name="AddCoffeeButton" type="Button" parent="VBoxContainer/GUI/GUIContainer/CheatContainer/CoffeeCheatContainer"]
+margin_right = 64.0
+margin_bottom = 20.0
+text = "+ Coffee"
+
+[node name="RemoveCoffeeButton" type="Button" parent="VBoxContainer/GUI/GUIContainer/CheatContainer/CoffeeCheatContainer"]
+margin_top = 24.0
+margin_right = 64.0
+margin_bottom = 44.0
+text = "- Coffee"
+
 [node name="FoodContainer" type="HBoxContainer" parent="VBoxContainer/GUI/GUIContainer"]
 margin_left = 1076.0
 margin_right = 1280.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 
 [node name="PizzaContainer" type="HBoxContainer" parent="VBoxContainer/GUI/GUIContainer/FoodContainer"]
 margin_right = 100.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 
 [node name="Pizza" type="MarginContainer" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/PizzaContainer"]
 margin_right = 100.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 rect_min_size = Vector2( 100, 40 )
 
 [node name="Background" type="NinePatchRect" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/PizzaContainer/Pizza"]
 margin_right = 100.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 
 [node name="Label" type="RichTextLabel" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/PizzaContainer/Pizza/Background"]
 margin_right = 50.0
@@ -102,16 +173,16 @@ text = "10"
 [node name="CoffeeContainer" type="HBoxContainer" parent="VBoxContainer/GUI/GUIContainer/FoodContainer"]
 margin_left = 104.0
 margin_right = 204.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 
 [node name="Coffee" type="MarginContainer" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/CoffeeContainer"]
 margin_right = 100.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 rect_min_size = Vector2( 100, 40 )
 
 [node name="Background" type="NinePatchRect" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/CoffeeContainer/Coffee"]
 margin_right = 100.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 
 [node name="Label" type="RichTextLabel" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/CoffeeContainer/Coffee/Background"]
 margin_right = 50.0
@@ -125,9 +196,9 @@ margin_bottom = 40.0
 text = "10"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 44.0
+margin_top = 48.0
 margin_right = 1280.0
-margin_bottom = 64.0
+margin_bottom = 68.0
 alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2"]
@@ -142,4 +213,12 @@ margin_bottom = 20.0
 text = "Some Server"
 script = ExtResource( 1 )
 
+[connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/MoneyCheatContainer/AddMoneyButton" to="." method="_on_AddMoneyButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/MoneyCheatContainer/RemoveMoneyButton" to="." method="_on_RemoveMoneyButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/LevelCheatContainer2/AddLevelButton" to="." method="_on_AddLevelButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/LevelCheatContainer2/RemoveLevelButton" to="." method="_on_RemoveLevelButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/PizzaCheatContainer/AddPizzaButton" to="." method="_on_AddPizzaButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/PizzaCheatContainer/RemovePizzaButton" to="." method="_on_RemovePizzaButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/CoffeeCheatContainer/AddCoffeeButton" to="." method="_on_AddCoffeeButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/CoffeeCheatContainer/RemoveCoffeeButton" to="." method="_on_RemoveCoffeeButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/VBoxContainer/ServerButton" to="VBoxContainer/HBoxContainer2/VBoxContainer/ServerButton" method="_on_ServerButton_pressed"]
