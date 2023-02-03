@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn7sxevgl7kuj"]
+
+[ext_resource type="Script" path="res://qa_input.gd" id="1_07mka"]
+
+[node name="qa" type="Node2D"]
+script = ExtResource("1_07mka")
+
+[node name="question" type="Label" parent="."]
+offset_left = 206.0
+offset_top = 103.0
+offset_right = 936.0
+offset_bottom = 225.0
+text = "What's the answer?"
+
+[node name="answer" type="LineEdit" parent="."]
+offset_left = 174.0
+offset_top = 350.0
+offset_right = 997.0
+offset_bottom = 538.0
