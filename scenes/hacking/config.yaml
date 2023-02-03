@@ -1,5 +1,6 @@
 - type: choice
   difficulty: 5
+  timeout: 10
   prompt: You found an archive that seems to may contain sensitive data. Which of the commands will extract it?
   choices:
     a: tar -xzf archive.tar.gz
@@ -9,11 +10,13 @@
   solution: a
 
 - type: regex
+  timeout: 20
   difficulty: 5
   prompt: You need to choose a username for your secret H4xX0R user but the admin only allows usernames that match a specific pattern
   regex: /^user-[0-9]{3,5}$/
 
 - type: question
+  timeout: 30
   difficulty: 6
   promt: |
     While reverse engineering the security program of your target you found a Javascript function. What input would be required to make it return false?
@@ -24,3 +27,7 @@
       return !!value
     };
   solution: 15
+
+- type: scriptkiddie
+  timeout: 10
+  required_characters: 50
