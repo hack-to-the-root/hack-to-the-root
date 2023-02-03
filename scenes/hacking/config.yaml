@@ -1,6 +1,26 @@
----
-- question: What is the answer?
-  type: qa
-  answer: 42
+- type: choice
+  difficulty: 5
+  prompt: You found an archive that seems to may contain sensitive data. Which of the commands will extract it?
+  choices:
+    a: tar -xzf archive.tar.gz
+    b: echo archive.tar.gz | unpack
+    c: untar archive.tar.gz
+    d: mv archive.tar.gz unpacked
+  solution: a
+
 - type: regex
-  regex: /f[o]{2}bar/
+  difficulty: 5
+  prompt: You need to choose a username for your secret H4xX0R user but the admin only allows usernames that match a specific pattern
+  regex: /^user-[0-9]{3,5}$/
+
+- type: question
+  difficulty: 6
+  promt: |
+    While reverse engineering the security program of your target you found a Javascript function. What input would be required to make it return false?
+
+    const superSecureCheck = number => {
+      let value = number - 15;
+
+      return !!value
+    };
+  solution: 15
