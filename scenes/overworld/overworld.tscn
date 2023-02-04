@@ -227,7 +227,6 @@ script = ExtResource( 3 )
 margin_top = 404.0
 margin_right = 300.0
 margin_bottom = 418.0
-text = "testasdfaasdf"
 align = 1
 autowrap = true
 
