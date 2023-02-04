@@ -23,3 +23,8 @@ Thanks to [TradeByte](https://www.tradebyte.com/en) for providing the jam site.
 - [Icons created by Freepik - Flaticon](https://www.flaticon.com/authors/freepik)
 - [Icons created by orvipixel - Flaticon](https://www.flaticon.com/authors/orvipixel)
 - [Icons created by Culmbio - Flaticon](https://www.flaticon.com/authors/culmbio)
+- [Sounds created by @wyver9 - OpenGameArt](https://wyver9.bandcamp.com/)
+- [Sounds created by shiru8bit - OpenGameArt](https://opengameart.org/content/8-bit-chiptune-after-the-rain)
+- [Sounds created by megaPixelMusic - OpenGameArt](https://soundcloud.com/megapixelmusic)
+- [Sounds created by Beetlemuse - Freesound](https://freesound.org/people/Beetlemuse/sounds/529082/)
+- [Sounds created by LPHypeR - Freesound](https://freesound.org/people/LPHypeR/sounds/564590/)
