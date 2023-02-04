@@ -21,7 +21,7 @@ func _ready():
 		var button = Button.new()
 		button.set_size(Vector2(100, 50))
 		button.text = item.display_name
-		button.connect("pressed", self, "_buy_item", [ item ])
+		button.connect("pressed", self, "_buy_item", [ button, item ])
 		shop_container.add_child(button)
 		print("added button " + item.name + " with display_name " + item.display_name)
 		print(button)
@@ -31,9 +31,20 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func _buy_item(item):
+func _buy_item(button, item):
 	print("bying " + item.name + " for " + str(item.costs) + " credits")
-	Globals.money -= item.costs
+	# check for sufficient funds
+	if item.costs > Globals.money:
+		print("not enough money to buy item: " + item.name)
+		return
+	# check if upgrade is already bought
+	if item.name in Globals.upgrades:
+		print("you can only buy one of item: " + item.name)
+		return
+	Globals.removeMoney(item.costs)
 	match item.name:
-		"pizza": Globals.pizza += 1
-		"coffee": Globals.coffee += 1
+		"pizza": Globals.addPizza(1)
+		"coffee": Globals.addCoffee(1)
+		_:
+			Globals.upgrades.append(item.name)
+			button.disabled = true
