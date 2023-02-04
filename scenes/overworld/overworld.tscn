@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/overworld/ServerButton.gd" type="Script" id=1]
 [ext_resource path="res://scenes/overworld/overworld.gd" type="Script" id=2]
 [ext_resource path="res://assets/overworld/money-bag.png" type="Texture" id=3]
 [ext_resource path="res://assets/overworld/pizza.png" type="Texture" id=4]
 [ext_resource path="res://assets/overworld/coffee-cup.png" type="Texture" id=5]
+[ext_resource path="res://assets/overworld/level-up.png" type="Texture" id=6]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
@@ -37,7 +38,7 @@ rect_min_size = Vector2( 100, 40 )
 
 [node name="Background" type="NinePatchRect" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/MoneyContainer/Money"]
 margin_right = 100.0
-margin_bottom = 32.0
+margin_bottom = 44.0
 
 [node name="Label" type="Sprite" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/MoneyContainer/Money/Background"]
 scale = Vector2( 0.5, 0.5 )
@@ -52,29 +53,30 @@ text = "10"
 valign = 1
 
 [node name="LevelContainer" type="HBoxContainer" parent="VBoxContainer/GUI/GUIContainer/StatsContainer"]
-margin_left = 114.0
-margin_right = 214.0
+margin_left = 104.0
+margin_right = 204.0
 margin_bottom = 44.0
 
 [node name="Level" type="MarginContainer" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/LevelContainer"]
 margin_right = 100.0
-margin_bottom = 32.0
+margin_bottom = 44.0
 rect_min_size = Vector2( 100, 40 )
 
 [node name="Background" type="NinePatchRect" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/LevelContainer/Level"]
 margin_right = 100.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 
-[node name="Label" type="RichTextLabel" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/LevelContainer/Level/Background"]
-margin_right = 50.0
-margin_bottom = 32.0
-text = "Level"
+[node name="Label" type="Sprite" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/LevelContainer/Level/Background"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+centered = false
 
 [node name="Number" type="Label" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/LevelContainer/Level/Background"]
-margin_left = 50.0
+margin_left = 40.0
 margin_right = 100.0
-margin_bottom = 40.0
+margin_bottom = 32.0
 text = "10"
+valign = 1
 
 [node name="CheatContainer" type="HBoxContainer" parent="VBoxContainer/GUI/GUIContainer"]
 margin_left = 538.0
@@ -148,20 +150,20 @@ text = "- Coffee"
 [node name="FoodContainer" type="HBoxContainer" parent="VBoxContainer/GUI/GUIContainer"]
 margin_left = 1076.0
 margin_right = 1280.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 
 [node name="PizzaContainer" type="HBoxContainer" parent="VBoxContainer/GUI/GUIContainer/FoodContainer"]
 margin_right = 100.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 
 [node name="Pizza" type="MarginContainer" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/PizzaContainer"]
 margin_right = 100.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 rect_min_size = Vector2( 100, 40 )
 
 [node name="Background" type="NinePatchRect" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/PizzaContainer/Pizza"]
 margin_right = 100.0
-margin_bottom = 32.0
+margin_bottom = 44.0
 
 [node name="Label" type="Sprite" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/PizzaContainer/Pizza/Background"]
 scale = Vector2( 0.5, 0.5 )
@@ -178,16 +180,16 @@ valign = 1
 [node name="CoffeeContainer" type="HBoxContainer" parent="VBoxContainer/GUI/GUIContainer/FoodContainer"]
 margin_left = 104.0
 margin_right = 204.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 
 [node name="Coffee" type="MarginContainer" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/CoffeeContainer"]
 margin_right = 100.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 rect_min_size = Vector2( 100, 40 )
 
 [node name="Background" type="NinePatchRect" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/CoffeeContainer/Coffee"]
 margin_right = 100.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 
 [node name="Label" type="Sprite" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/CoffeeContainer/Coffee/Background"]
 scale = Vector2( 0.5, 0.5 )
