@@ -32,13 +32,13 @@
   display_name: John the Ripper
   description: Part of the script kiddie tool belt, speeds up your hacking
   costs: 30
-  icon: pizza.png
+  icon: sha-256.png
 
 - name: whiterabbit
   display_name: White Rabbit
   description: Follow the white Rabbit during your next hack, afterwards it leaves (single use)
   costs: 100
-  icon: pizza.png
+  icon: rabbit.png
   hint: true
 
 - name: "0day"
@@ -58,7 +58,7 @@
   display_name: SQL injection
   description: Use SQL injection to hack harder targets
   costs: 100
-  icon: pizza.png
+  icon: sql.png
 - name: privesc
   display_name: Privilege escalation
   description: Use privilege escalation to hack harder targets
@@ -68,4 +68,4 @@
   display_name: Remote code execution
   description: Use remote code execution to hack harder targets
   costs: 200
-  icon: pizza.png
+  icon: hacker2.png
