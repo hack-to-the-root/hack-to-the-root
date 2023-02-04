@@ -21,9 +21,23 @@ margin_bottom = 720.0
 alignment = 1
 
 [node name="QuestionLabel" type="RichTextLabel" parent="RootContainer/HBoxContainer/VBoxContainer"]
-margin_top = 293.0
+margin_top = 239.0
 margin_right = 512.0
-margin_bottom = 398.0
+margin_bottom = 344.0
+rect_min_size = Vector2( 512, 0 )
+text = "What is the answer?
+ds
+ds
+sd
+sd
+ds
+d"
+fit_content_height = true
+
+[node name="RegexLabel" type="RichTextLabel" parent="RootContainer/HBoxContainer/VBoxContainer"]
+margin_top = 348.0
+margin_right = 512.0
+margin_bottom = 453.0
 rect_min_size = Vector2( 512, 0 )
 text = "What is the answer?
 ds
@@ -35,6 +49,6 @@ d"
 fit_content_height = true
 
 [node name="AnswerInput" type="LineEdit" parent="RootContainer/HBoxContainer/VBoxContainer"]
-margin_top = 402.0
+margin_top = 457.0
 margin_right = 512.0
-margin_bottom = 426.0
+margin_bottom = 481.0

@@ -1,6 +1,7 @@
 extends Node2D
 
 onready var questionLabel = get_node("RootContainer/HBoxContainer/VBoxContainer/QuestionLabel")
+onready var regexLabel = get_node("RootContainer/HBoxContainer/VBoxContainer/RegexLabel")
 onready var answerInput = get_node("RootContainer/HBoxContainer/VBoxContainer/AnswerInput")
 
 var task
@@ -25,6 +26,7 @@ func _ready():
 		'question':
 			questionLabel.text = task['prompt']
 		'regex':
+			regexLabel.text = task['regex']
 			regex = RegEx.new()
 			regex.compile(task['regex'])
 			questionLabel.text = task['prompt']
