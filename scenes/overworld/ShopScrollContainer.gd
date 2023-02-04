@@ -22,10 +22,20 @@ func _ready():
 		button.set_size(Vector2(100, 50))
 		button.text = item.display_name
 		button.connect("pressed", self, "_buy_item", [ button, item ])
+		button.connect("mouse_entered", self, "_on_button_mouse_entered", [ item ])
+		button.connect("mouse_exited", self, "_on_button_mouse_exited")
 		shop_container.add_child(button)
 		print("added button " + item.name + " with display_name " + item.display_name)
 		print(button)
 
+func _on_button_mouse_entered(item):
+	var label = get_parent().get_node("ShopLabel")
+	label.text = item.description
+	label.visible = true
+
+func _on_button_mouse_exited():
+	var label = get_parent().get_node("ShopLabel")
+	label.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

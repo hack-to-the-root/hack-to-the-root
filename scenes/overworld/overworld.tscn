@@ -232,6 +232,12 @@ script = ExtResource( 3 )
 
 [node name="ShopVBox" type="VBoxContainer" parent="VBoxContainer/ShopScrollContainer"]
 
+[node name="ShopLabel" type="Label" parent="VBoxContainer"]
+visible = false
+margin_top = 72.0
+margin_right = 1280.0
+margin_bottom = 86.0
+
 [node name="ServersContainer" parent="VBoxContainer" instance=ExtResource( 8 )]
 margin_top = 176.0
 margin_right = 1280.0
