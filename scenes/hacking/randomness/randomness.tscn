@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/hacking/randomness/randomness.gd" type="Script" id=1]
 [ext_resource path="res://assets/8-bit-hud.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/hacking/learning_with_computers .mp3" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 19
@@ -53,3 +54,8 @@ margin_right = 512.0
 margin_bottom = 403.0
 fit_content_height = true
 scroll_following = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -5.0
+autoplay = true
