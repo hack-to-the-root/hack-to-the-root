@@ -17,6 +17,8 @@ var time_since_pizza_consumption = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Globals.initTasks()
+	if !OS.is_debug_build():
+		$VBoxContainer/GUI/GUIContainer/CheatContainer.hide()
 
 
 func _process(delta):
