@@ -89,7 +89,7 @@
 - type: regex
   difficulty: 2
   prompt: What's the time?
-  regex: ([0-9]\d:[\d]{2})
+  regex: ([0-9]{2}:[\d]{2})
 
 - type: regex
   difficulty: 2
@@ -114,5 +114,5 @@
 - type: regex
   difficulty: 4
   prompt: The best homepage?
-  regex: https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#()?&//=]*)
+  regex: https?://(www\.)?[-a-zA-Z0-9]{2,256}\.[a-z]{2,6}
 

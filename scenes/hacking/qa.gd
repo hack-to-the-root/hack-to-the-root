@@ -44,7 +44,7 @@ func onSuccess():
 	get_tree().paused = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process():
+func _process(delta):
 	match task['type']:
 		'scriptkiddie':
 			if(answerInput.text.length() >= task['required_characters']):
