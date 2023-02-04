@@ -1,14 +1,22 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/hacking/randomness/randomness.gd" type="Script" id=1]
 [ext_resource path="res://assets/8-bit-hud.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/hacking/learning_with_computers .mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/Bittypix Monospace.otf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 19
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+font_data = ExtResource( 4 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -32,26 +40,27 @@ size_flags_horizontal = 6
 alignment = 1
 
 [node name="PromptLabel" type="RichTextLabel" parent="RootContainer/HBoxContainer/ControlsContainer"]
-margin_top = 316.0
+margin_top = 317.0
 margin_right = 512.0
-margin_bottom = 348.0
+margin_bottom = 349.0
 grow_horizontal = 2
 custom_fonts/normal_font = SubResource( 1 )
 fit_content_height = true
 
 [node name="ProgressLabel" type="RichTextLabel" parent="RootContainer/HBoxContainer/ControlsContainer"]
-margin_top = 352.0
+margin_top = 353.0
 margin_right = 512.0
-margin_bottom = 384.0
+margin_bottom = 385.0
 grow_horizontal = 2
 rect_min_size = Vector2( 512, 0 )
 custom_fonts/normal_font = SubResource( 1 )
 fit_content_height = true
 
 [node name="FingerprintLabel" type="RichTextLabel" parent="RootContainer/HBoxContainer/ControlsContainer"]
-margin_top = 388.0
+margin_top = 389.0
 margin_right = 512.0
 margin_bottom = 403.0
+theme = SubResource( 3 )
 fit_content_height = true
 scroll_following = true
 

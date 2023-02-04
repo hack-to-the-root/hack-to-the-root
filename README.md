@@ -42,3 +42,5 @@ Thanks to [TradeByte](https://www.tradebyte.com/en) for providing the jam site.
 - [Sounds created by LPHypeR - Freesound](https://freesound.org/people/LPHypeR/sounds/564590/)
 - [Sounds created by boyscontentclub - Freesound](https://freesound.org/people/boyscontentclub/sounds/521585/)
 - [Sounds created by drummerman - Freesound](https://freesound.org/people/drummerman/sounds/368129/)
+- [Font created by Seba Perez - dafont.com](https://www.dafont.com/de/8-bit-hud.font)
+- [Font created by Chequered Ink - dafont.com](https://www.dafont.com/de/bittypix-monospace.font)
