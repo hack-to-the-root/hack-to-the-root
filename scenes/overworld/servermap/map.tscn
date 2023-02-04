@@ -126,128 +126,146 @@ points = PoolVector2Array( 535, 61, 399, 145 )
 z_index = -1
 points = PoolVector2Array( 407, 147, 477, 361 )
 
-[node name="QuestionButton4" parent="Control" instance=ExtResource( 3 )]
-margin_left = 303.0
-margin_top = 656.0
-margin_right = 379.0
-margin_bottom = 726.0
+[node name="Server1" parent="Control" instance=ExtResource( 1 )]
+margin_left = 262.0
+margin_top = 13.0
+margin_right = 338.0
+margin_bottom = 83.0
 
-[node name="RegexButton4" parent="Control" instance=ExtResource( 2 )]
-margin_left = 364.0
-margin_top = 116.0
-margin_right = 440.0
-margin_bottom = 186.0
-
-[node name="QuestionButton5" parent="Control" instance=ExtResource( 3 )]
-margin_left = 712.0
-margin_top = 695.0
-margin_right = 788.0
-margin_bottom = 765.0
-
-[node name="RegexButton5" parent="Control" instance=ExtResource( 2 )]
-margin_left = 486.0
-margin_top = 782.0
-margin_right = 562.0
-margin_bottom = 852.0
-
-[node name="ScriptKiddieButton5" parent="Control" instance=ExtResource( 1 )]
-margin_left = 638.0
-margin_top = 538.0
-margin_right = 714.0
-margin_bottom = 608.0
-
-[node name="QuestionButton6" parent="Control" instance=ExtResource( 3 )]
-margin_left = 623.0
-margin_top = 368.0
-margin_right = 699.0
-margin_bottom = 438.0
-
-[node name="RegexButton6" parent="Control" instance=ExtResource( 2 )]
-margin_left = 357.0
-margin_top = 458.0
-margin_right = 433.0
-margin_bottom = 528.0
-
-[node name="ScriptKiddieButton6" parent="Control" instance=ExtResource( 1 )]
-margin_left = 482.0
-margin_top = 931.0
-margin_right = 558.0
-margin_bottom = 1001.0
-
-[node name="QuestionButton7" parent="Control" instance=ExtResource( 3 )]
-margin_left = 653.0
-margin_top = 212.0
-margin_right = 729.0
-margin_bottom = 282.0
-
-[node name="RegexButton7" parent="Control" instance=ExtResource( 2 )]
-margin_left = 104.0
-margin_top = 233.0
-margin_right = 180.0
-margin_bottom = 303.0
-
-[node name="ScriptKiddieButton7" parent="Control" instance=ExtResource( 1 )]
-margin_left = 166.0
-margin_top = 555.0
-margin_right = 242.0
-margin_bottom = 625.0
-
-[node name="QuestionButton8" parent="Control" instance=ExtResource( 3 )]
-margin_left = 240.0
-margin_top = 393.0
-margin_right = 316.0
-margin_bottom = 463.0
-
-[node name="RegexButton8" parent="Control" instance=ExtResource( 2 )]
-margin_left = 810.0
-margin_top = 251.0
-margin_right = 886.0
-margin_bottom = 321.0
-
-[node name="ScriptKiddieButton8" parent="Control" instance=ExtResource( 1 )]
-margin_left = 787.0
-margin_top = 456.0
-margin_right = 863.0
-margin_bottom = 526.0
-
-[node name="QuestionButton9" parent="Control" instance=ExtResource( 3 )]
-margin_left = 259.0
-margin_top = 192.0
-margin_right = 335.0
-margin_bottom = 262.0
-
-[node name="RegexButton9" parent="Control" instance=ExtResource( 2 )]
-margin_left = 436.0
-margin_top = 323.0
-margin_right = 512.0
-margin_bottom = 393.0
-
-[node name="ScriptKiddieButton9" parent="Control" instance=ExtResource( 1 )]
-margin_left = 504.0
-margin_top = 180.0
-margin_right = 580.0
-margin_bottom = 250.0
-
-[node name="QuestionButton10" parent="Control" instance=ExtResource( 3 )]
+[node name="Server2" parent="Control" instance=ExtResource( 3 )]
 margin_left = 496.0
 margin_top = 10.0
 margin_right = 572.0
 margin_bottom = 80.0
 
-[node name="RegexButton10" parent="Control" instance=ExtResource( 2 )]
+[node name="Server3" parent="Control" instance=ExtResource( 2 )]
 margin_left = 734.0
 margin_top = 23.0
 margin_right = 810.0
 margin_bottom = 93.0
 
-[node name="ScriptKiddieButton10" parent="Control" instance=ExtResource( 1 )]
-margin_left = 262.0
-margin_top = 13.0
-margin_right = 338.0
-margin_bottom = 83.0
+[node name="Server4" parent="Control" instance=ExtResource( 2 )]
+margin_left = 364.0
+margin_top = 116.0
+margin_right = 440.0
+margin_bottom = 186.0
+disabled = true
+
+[node name="Server5" parent="Control" instance=ExtResource( 2 )]
+margin_left = 104.0
+margin_top = 233.0
+margin_right = 180.0
+margin_bottom = 303.0
+disabled = true
+
+[node name="Server6" parent="Control" instance=ExtResource( 3 )]
+margin_left = 259.0
+margin_top = 192.0
+margin_right = 335.0
+margin_bottom = 262.0
+disabled = true
+
+[node name="Server7" parent="Control" instance=ExtResource( 1 )]
+margin_left = 504.0
+margin_top = 180.0
+margin_right = 580.0
+margin_bottom = 250.0
+disabled = true
+
+[node name="Server8" parent="Control" instance=ExtResource( 3 )]
+margin_left = 653.0
+margin_top = 212.0
+margin_right = 729.0
+margin_bottom = 282.0
+disabled = true
+
+[node name="Server9" parent="Control" instance=ExtResource( 2 )]
+margin_left = 810.0
+margin_top = 251.0
+margin_right = 886.0
+margin_bottom = 321.0
+disabled = true
+
+[node name="Server10" parent="Control" instance=ExtResource( 3 )]
+margin_left = 240.0
+margin_top = 393.0
+margin_right = 316.0
+margin_bottom = 463.0
+disabled = true
+
+[node name="Server11" parent="Control" instance=ExtResource( 2 )]
+margin_left = 436.0
+margin_top = 323.0
+margin_right = 512.0
+margin_bottom = 393.0
+disabled = true
+
+[node name="Server12" parent="Control" instance=ExtResource( 3 )]
+margin_left = 623.0
+margin_top = 368.0
+margin_right = 699.0
+margin_bottom = 438.0
+disabled = true
+
+[node name="Server13" parent="Control" instance=ExtResource( 1 )]
+margin_left = 166.0
+margin_top = 555.0
+margin_right = 242.0
+margin_bottom = 625.0
+disabled = true
+
+[node name="Server14" parent="Control" instance=ExtResource( 2 )]
+margin_left = 357.0
+margin_top = 458.0
+margin_right = 433.0
+margin_bottom = 528.0
+disabled = true
+
+[node name="Server15" parent="Control" instance=ExtResource( 1 )]
+margin_left = 638.0
+margin_top = 538.0
+margin_right = 714.0
+margin_bottom = 608.0
+disabled = true
+
+[node name="Server16" parent="Control" instance=ExtResource( 1 )]
+margin_left = 787.0
+margin_top = 456.0
+margin_right = 863.0
+margin_bottom = 526.0
+disabled = true
+
+[node name="Server17" parent="Control" instance=ExtResource( 3 )]
+margin_left = 303.0
+margin_top = 656.0
+margin_right = 379.0
+margin_bottom = 726.0
+disabled = true
+
+[node name="Server18" parent="Control" instance=ExtResource( 3 )]
+margin_left = 712.0
+margin_top = 695.0
+margin_right = 788.0
+margin_bottom = 765.0
+disabled = true
+
+[node name="Server19" parent="Control" instance=ExtResource( 2 )]
+margin_left = 486.0
+margin_top = 782.0
+margin_right = 562.0
+margin_bottom = 852.0
+disabled = true
+
+[node name="Server20" parent="Control" instance=ExtResource( 1 )]
+margin_left = 482.0
+margin_top = 931.0
+margin_right = 558.0
+margin_bottom = 1001.0
+disabled = true
 
 [node name="EntropyButton" parent="Control" instance=ExtResource( 4 )]
 margin_left = 57.0
 margin_top = 57.0
 margin_right = 133.0
 margin_bottom = 127.0
+disabled = true

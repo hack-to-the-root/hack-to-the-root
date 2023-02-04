@@ -74,11 +74,13 @@ func update_dummy_code():
 func onSuccess():
 	prompt_label.text = "Success!"
 	Globals.addMoney(int(BASE_REWARD * DIFFICULTY_MULTIPLIER * Globals.task['difficulty']))
+	Globals.setTaskOutcome(true)
 	returnToOverworld()
 	
 
 func onFailure():
 	prompt_label.text = "You were not fast enough"
+	Globals.setTaskOutcome(false)
 	returnToOverworld()
 	
 

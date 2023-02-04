@@ -19,6 +19,13 @@ func _ready():
 	Globals.initTasks()
 	if !OS.is_debug_build():
 		$VBoxContainer/GUI/GUIContainer/CheatContainer.hide()
+	
+	if Globals.taskOutcome == true:
+		Globals.succeedTask()
+	elif Globals.taskOutcome == false:
+		Globals.failTask()
+	
+	Globals.loadButtonStates()
 
 
 func _process(delta):
