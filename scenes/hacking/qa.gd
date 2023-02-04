@@ -34,6 +34,7 @@ func _ready():
 
 func onSuccess():
 	yield(get_tree().create_timer(3.0), "timeout")
+	Globals.addMoney(15 * task['difficulty'])
 	get_tree().change_scene("res://scenes/overworld/overworld.tscn")
 
 
@@ -45,7 +46,7 @@ func _process(delta):
 				questionLabel.text = 'You are a super hacker!'
 				onSuccess()
 		'question':
-			if(answerInput.text.length() >= task['answer']):
+			if(answerInput.text == str(task['solution'])):
 				questionLabel.text = 'Correct!'
 				onSuccess()
 		'regex':

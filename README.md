@@ -11,7 +11,7 @@ This game was made for the [Global Game Jam 2023](https://globalgamejam.org/2023
 
 Thanks to [TradeByte](https://www.tradebyte.com/en) for providing the jam site.
 
-Play it online on [https://hack-to-the-root.github.io/hack-to-the-root/](https://hack-to-the-root.github.io/hack-to-the-root/)
+▶ Play it online on [https://hack-to-the-root.github.io/hack-to-the-root/](https://hack-to-the-root.github.io/hack-to-the-root/)
 
 ## Downloads
 * [Linux](https://hack-to-the-root.github.io/hack-to-the-root/hack-to-the-root.x86_64)
