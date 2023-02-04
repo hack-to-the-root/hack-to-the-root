@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/hacking/qa.gd" type="Script" id=1]
+[ext_resource path="res://assets/hacking/learning_with_computers .mp3" type="AudioStream" id=2]
 
 [node name="qa" type="Node2D"]
 script = ExtResource( 1 )
@@ -39,3 +40,8 @@ fit_content_height = true
 margin_top = 367.0
 margin_right = 512.0
 margin_bottom = 391.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -5.0
+autoplay = true

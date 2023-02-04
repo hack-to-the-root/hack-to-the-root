@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
+[ext_resource path="res://assets/overworld/after_the_rain.mp3" type="AudioStream" id=1]
 [ext_resource path="res://scenes/overworld/overworld.gd" type="Script" id=2]
 [ext_resource path="res://scenes/overworld/ShopScrollContainer.gd" type="Script" id=3]
 [ext_resource path="res://assets/overworld/money-bag.png" type="Texture" id=4]
@@ -236,6 +237,10 @@ margin_right = 1280.0
 margin_bottom = 672.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/MoneyCheatContainer/AddMoneyButton" to="." method="_on_AddMoneyButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/MoneyCheatContainer/RemoveMoneyButton" to="." method="_on_RemoveMoneyButton_pressed"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/mainmenu/logo.png" type="Texture" id=1]
 [ext_resource path="res://scenes/mainmenu/mainmenu.gd" type="Script" id=2]
 [ext_resource path="res://assets/8-bit-hud.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/mainmenu/wyver9-8-bit-beatem-up.mp3" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=2]
 size = 15
@@ -83,6 +84,11 @@ size_flags_vertical = 4
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 5
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -5.0
+autoplay = true
 
 [connection signal="pressed" from="RootContainer/HBoxContainer/ControlsContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="RootContainer/HBoxContainer/ControlsContainer/HelpButton" to="." method="_on_HelpButton_pressed"]
