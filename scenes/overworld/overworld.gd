@@ -25,10 +25,11 @@ func _process(delta):
 	pizza_label.text = str(Globals.pizza)
 	coffee_label.text = str(Globals.coffee)
 	
-	consumeIfNecessary(delta)
+	consumeCoffeeAndPizzaIfNecessary(delta)
+	checkStarvation()
 	
 	
-func consumeIfNecessary(delta):
+func consumeCoffeeAndPizzaIfNecessary(delta):
 	time_since_coffee_consumption += delta
 	time_since_pizza_consumption += delta
 	
@@ -39,6 +40,10 @@ func consumeIfNecessary(delta):
 	if time_since_pizza_consumption > PIZZA_CONSUMPTION_INTERVAL:
 		time_since_pizza_consumption = 0
 		Globals.removePizza(PIZZA_CONSUMPTION_AMOUNT)
+
+func checkStarvation():
+	if Globals.pizza <= 0 || Globals.coffee <= 0:
+		get_tree().change_scene("res://scenes/gameover/gameover.tscn")
 
 
 func _on_AddMoneyButton_pressed():
