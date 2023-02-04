@@ -32,12 +32,15 @@ func _process(delta):
 	
 	
 func _input(event):
-	keys_pressed += 1
+	if (event is InputEventKey):
+		keys_pressed += 1
 	
 	
 func update_progress():
 	var percent = (float(keys_pressed) / float(required_characters)) * 100.0
-	progress_label.text = str(int(percent)) + "%"
+	
+	if percent <= 100:
+		progress_label.text = str(int(percent)) + "%"
 	
 	
 func onSuccess():
