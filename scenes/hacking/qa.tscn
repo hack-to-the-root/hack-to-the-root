@@ -39,3 +39,8 @@ fit_content_height = true
 margin_top = 367.0
 margin_right = 512.0
 margin_bottom = 391.0
+
+[node name="Timer" type="Timer" parent="."]
+pause_mode = 2
+one_shot = true
+autostart = true

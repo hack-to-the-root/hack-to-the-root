@@ -33,9 +33,12 @@ func _ready():
 			
 
 func onSuccess():
-	yield(get_tree().create_timer(3.0), "timeout")
+	get_tree().paused = true
+	$Timer.start(3.0)
+	yield($Timer, "timeout")
 	Globals.addMoney(15 * task['difficulty'])
 	get_tree().change_scene("res://scenes/overworld/overworld.tscn")
+	get_tree().paused = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
