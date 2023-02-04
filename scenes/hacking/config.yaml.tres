@@ -12,7 +12,7 @@
 - type: question
   timeout: 30
   difficulty: 6
-  promt: |
+  prompt: |
     While reverse engineering the security program of your target you found a Javascript function. What input would be required to make it return false?
 
     const superSecureCheck = number => {
