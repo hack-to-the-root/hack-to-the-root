@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/overworld/ServerButton.gd" type="Script" id=1]
 [ext_resource path="res://scenes/overworld/overworld.gd" type="Script" id=2]
 [ext_resource path="res://scenes/overworld/ShopScrollContainer.gd" type="Script" id=3]
+[ext_resource path="res://assets/overworld/money-bag.png" type="Texture" id=4]
+[ext_resource path="res://assets/overworld/pizza.png" type="Texture" id=5]
+[ext_resource path="res://assets/overworld/coffee-cup.png" type="Texture" id=6]
+[ext_resource path="res://assets/overworld/level-up.png" type="Texture" id=7]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
@@ -37,16 +41,17 @@ rect_min_size = Vector2( 100, 40 )
 margin_right = 100.0
 margin_bottom = 44.0
 
-[node name="Label" type="RichTextLabel" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/MoneyContainer/Money/Background"]
-margin_right = 50.0
-margin_bottom = 40.0
-text = "$$$"
+[node name="Label" type="Sprite" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/MoneyContainer/Money/Background"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+centered = false
 
 [node name="Number" type="Label" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/MoneyContainer/Money/Background"]
-margin_left = 50.0
-margin_right = 100.0
-margin_bottom = 40.0
+margin_left = 40.0
+margin_right = 88.0
+margin_bottom = 32.0
 text = "10"
+valign = 1
 
 [node name="LevelContainer" type="HBoxContainer" parent="VBoxContainer/GUI/GUIContainer/StatsContainer"]
 margin_left = 104.0
@@ -62,16 +67,17 @@ rect_min_size = Vector2( 100, 40 )
 margin_right = 100.0
 margin_bottom = 44.0
 
-[node name="Label" type="RichTextLabel" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/LevelContainer/Level/Background"]
-margin_right = 50.0
-margin_bottom = 40.0
-text = "Level"
+[node name="Label" type="Sprite" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/LevelContainer/Level/Background"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+centered = false
 
 [node name="Number" type="Label" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/LevelContainer/Level/Background"]
-margin_left = 50.0
+margin_left = 40.0
 margin_right = 100.0
-margin_bottom = 40.0
+margin_bottom = 32.0
 text = "10"
+valign = 1
 
 [node name="CheatContainer" type="HBoxContainer" parent="VBoxContainer/GUI/GUIContainer"]
 margin_left = 538.0
@@ -160,16 +166,17 @@ rect_min_size = Vector2( 100, 40 )
 margin_right = 100.0
 margin_bottom = 44.0
 
-[node name="Label" type="RichTextLabel" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/PizzaContainer/Pizza/Background"]
-margin_right = 50.0
-margin_bottom = 40.0
-text = "Pizza"
+[node name="Label" type="Sprite" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/PizzaContainer/Pizza/Background"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+centered = false
 
 [node name="Number" type="Label" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/PizzaContainer/Pizza/Background"]
-margin_left = 50.0
-margin_right = 100.0
-margin_bottom = 40.0
+margin_left = 40.0
+margin_right = 88.0
+margin_bottom = 32.0
 text = "10"
+valign = 1
 
 [node name="CoffeeContainer" type="HBoxContainer" parent="VBoxContainer/GUI/GUIContainer/FoodContainer"]
 margin_left = 104.0
@@ -185,16 +192,17 @@ rect_min_size = Vector2( 100, 40 )
 margin_right = 100.0
 margin_bottom = 44.0
 
-[node name="Label" type="RichTextLabel" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/CoffeeContainer/Coffee/Background"]
-margin_right = 50.0
-margin_bottom = 40.0
-text = "Coffee"
+[node name="Label" type="Sprite" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/CoffeeContainer/Coffee/Background"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+centered = false
 
 [node name="Number" type="Label" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/CoffeeContainer/Coffee/Background"]
-margin_left = 50.0
-margin_right = 100.0
-margin_bottom = 40.0
+margin_left = 40.0
+margin_right = 88.0
+margin_bottom = 32.0
 text = "10"
+valign = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 48.0
