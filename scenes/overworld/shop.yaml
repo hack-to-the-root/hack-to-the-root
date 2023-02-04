@@ -1,7 +1,3 @@
-- name: hoodie
-  display_name: Hacker uniform
-  description: This »official hacker uniform«® hides you from prying eyes
-  costs: 10
 - name: pizza
   display_name: Hacker food
   description: The one and only hacker food
@@ -10,3 +6,15 @@
   display_name: Hacker drink
   description: The fluid that keeps you going
   costs: 2
+- name: hoodie
+  display_name: Hacker uniform
+  description: This »official hacker uniform«® hides you from prying eyes
+  costs: 10
+- name: vpn
+  display_name: SouthVPN®
+  description: Hide your tracks behind other peoples computers
+  costs: 50
+- name: "0day"
+  display_name: Zero-day-exploit
+  description: Expensive but helpful
+  costs: 200
