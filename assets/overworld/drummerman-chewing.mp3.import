@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/drummerman-chewing.mp3-6c41f6a0ebbcd1a7914dc682bd9359de.mp3str"
+
+[deps]
+
+source_file="res://assets/overworld/drummerman-chewing.mp3"
+dest_files=[ "res://.import/drummerman-chewing.mp3-6c41f6a0ebbcd1a7914dc682bd9359de.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

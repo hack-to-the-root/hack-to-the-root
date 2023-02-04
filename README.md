@@ -37,3 +37,4 @@ Thanks to [TradeByte](https://www.tradebyte.com/en) for providing the jam site.
 - [Sounds created by Beetlemuse - Freesound](https://freesound.org/people/Beetlemuse/sounds/529082/)
 - [Sounds created by LPHypeR - Freesound](https://freesound.org/people/LPHypeR/sounds/564590/)
 - [Sounds created by boyscontentclub - Freesound](https://freesound.org/people/boyscontentclub/sounds/521585/)
+- [Sounds created by drummerman - Freesound](https://freesound.org/people/drummerman/sounds/368129/)

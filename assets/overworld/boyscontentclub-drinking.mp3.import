@@ -11,5 +11,5 @@ dest_files=[ "res://.import/boyscontentclub-drinking.mp3-132db25987b75dbaebe2319
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

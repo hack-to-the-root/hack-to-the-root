@@ -50,6 +50,7 @@ func consumeCoffeeAndPizzaIfNecessary(delta):
 		
 	if time_since_pizza_consumption > PIZZA_CONSUMPTION_INTERVAL:
 		time_since_pizza_consumption = 0
+		$eatingSound.play()
 		Globals.removePizza(PIZZA_CONSUMPTION_AMOUNT)
 
 func checkStarvation():
