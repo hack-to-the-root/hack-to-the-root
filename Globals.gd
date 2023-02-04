@@ -4,6 +4,7 @@ var money = 1000
 var level = 1
 var pizza = 5
 var coffee = 5
+var upgrades = []
 
 func addMoney(amount):
 	money += amount

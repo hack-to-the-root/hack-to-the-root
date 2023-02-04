@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/overworld/ServerButton.gd" type="Script" id=1]
 [ext_resource path="res://scenes/overworld/overworld.gd" type="Script" id=2]
-[ext_resource path="res://assets/overworld/money-bag.png" type="Texture" id=3]
-[ext_resource path="res://assets/overworld/pizza.png" type="Texture" id=4]
-[ext_resource path="res://assets/overworld/coffee-cup.png" type="Texture" id=5]
-[ext_resource path="res://assets/overworld/level-up.png" type="Texture" id=6]
+[ext_resource path="res://scenes/overworld/ShopScrollContainer.gd" type="Script" id=3]
+[ext_resource path="res://assets/overworld/money-bag.png" type="Texture" id=4]
+[ext_resource path="res://assets/overworld/pizza.png" type="Texture" id=5]
+[ext_resource path="res://assets/overworld/coffee-cup.png" type="Texture" id=6]
+[ext_resource path="res://assets/overworld/level-up.png" type="Texture" id=7]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
@@ -42,7 +43,7 @@ margin_bottom = 44.0
 
 [node name="Label" type="Sprite" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/MoneyContainer/Money/Background"]
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 centered = false
 
 [node name="Number" type="Label" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/MoneyContainer/Money/Background"]
@@ -68,7 +69,7 @@ margin_bottom = 44.0
 
 [node name="Label" type="Sprite" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/LevelContainer/Level/Background"]
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 centered = false
 
 [node name="Number" type="Label" parent="VBoxContainer/GUI/GUIContainer/StatsContainer/LevelContainer/Level/Background"]
@@ -167,7 +168,7 @@ margin_bottom = 44.0
 
 [node name="Label" type="Sprite" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/PizzaContainer/Pizza/Background"]
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 centered = false
 
 [node name="Number" type="Label" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/PizzaContainer/Pizza/Background"]
@@ -193,7 +194,7 @@ margin_bottom = 44.0
 
 [node name="Label" type="Sprite" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/CoffeeContainer/Coffee/Background"]
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 centered = false
 
 [node name="Number" type="Label" parent="VBoxContainer/GUI/GUIContainer/FoodContainer/CoffeeContainer/Coffee/Background"]
@@ -220,6 +221,15 @@ margin_right = 92.0
 margin_bottom = 20.0
 text = "Some Server"
 script = ExtResource( 1 )
+
+[node name="ShopScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+margin_top = 72.0
+margin_right = 1280.0
+margin_bottom = 172.0
+rect_min_size = Vector2( 0, 100 )
+script = ExtResource( 3 )
+
+[node name="ShopVBox" type="VBoxContainer" parent="VBoxContainer/ShopScrollContainer"]
 
 [connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/MoneyCheatContainer/AddMoneyButton" to="." method="_on_AddMoneyButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/MoneyCheatContainer/RemoveMoneyButton" to="." method="_on_RemoveMoneyButton_pressed"]
