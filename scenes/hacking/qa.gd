@@ -17,9 +17,9 @@ func _ready():
 	file.close()
 	config = yaml.parse(config).result
 	var index = randi() % config.size()
-	
+
 	task = config[index]
-	
+
 	match task['type']:
 		'scriptkiddie':
 			questionLabel.text = 'HURRY UP! H4CK 7H3 5Y57T3M'
@@ -30,7 +30,8 @@ func _ready():
 			regex = RegEx.new()
 			regex.compile("^" + task['regex'] + "$")
 			questionLabel.text = task['prompt']
-			
+
+	answerInput.grab_focus()
 
 func onSuccess():
 	get_tree().paused = true
@@ -39,7 +40,6 @@ func onSuccess():
 	Globals.addMoney(15 * task['difficulty'])
 	get_tree().change_scene("res://scenes/overworld/overworld.tscn")
 	get_tree().paused = false
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
