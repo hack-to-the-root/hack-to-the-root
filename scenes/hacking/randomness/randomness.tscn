@@ -56,6 +56,7 @@ fit_content_height = true
 scroll_following = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 3 )
 volume_db = -5.0
 autoplay = true

@@ -1,9 +1,9 @@
 extends Node
 
-const COFFEE_CONSUMPTION_INTERVAL = 10.0
+const COFFEE_CONSUMPTION_INTERVAL = 12.3
 const COFFEE_CONSUMPTION_AMOUNT = 1
 
-const PIZZA_CONSUMPTION_INTERVAL = 25.0
+const PIZZA_CONSUMPTION_INTERVAL = 27.1
 const PIZZA_CONSUMPTION_AMOUNT = 1
 
 onready var money_label = get_node("VBoxContainer/GUI/GUIContainer/StatsContainer/MoneyContainer/Money/Background/Number")
@@ -45,10 +45,12 @@ func consumeCoffeeAndPizzaIfNecessary(delta):
 	
 	if time_since_coffee_consumption > COFFEE_CONSUMPTION_INTERVAL:
 		time_since_coffee_consumption = 0
+		$drinkingSound.play()
 		Globals.removeCoffee(COFFEE_CONSUMPTION_AMOUNT)
 		
 	if time_since_pizza_consumption > PIZZA_CONSUMPTION_INTERVAL:
 		time_since_pizza_consumption = 0
+		$eatingSound.play()
 		Globals.removePizza(PIZZA_CONSUMPTION_AMOUNT)
 
 func checkStarvation():
