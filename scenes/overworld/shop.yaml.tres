@@ -10,10 +10,12 @@
   display_name: Hacker uniform
   description: This »official hacker uniform«® hides you from prying eyes
   costs: 10
+  time_bonus: 5
 - name: vpn
   display_name: SouthVPN®
   description: Hide your tracks behind other peoples computers
   costs: 50
+  time_bonus: 20
 - name: "0day"
   display_name: Zero-day-exploit
   description: Expensive but helpful

@@ -36,3 +36,11 @@ func addCoffee(amount):
 
 func removeCoffee(amount):
 	coffee -= amount
+
+
+func getTimeBonus():
+	var time = 0
+	for upgrade in upgrades:
+		if upgrade.time_bonus:
+			time += upgrade.time_bonus
+	return time

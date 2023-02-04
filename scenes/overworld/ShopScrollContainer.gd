@@ -47,14 +47,10 @@ func _buy_item(button, item):
 	if item.costs > Globals.money:
 		print("not enough money to buy item: " + item.name)
 		return
-	# check if upgrade is already bought
-	if item.name in Globals.upgrades:
-		print("you can only buy one of item: " + item.name)
-		return
 	Globals.removeMoney(item.costs)
 	match item.name:
 		"pizza": Globals.addPizza(1)
 		"coffee": Globals.addCoffee(1)
 		_:
-			Globals.upgrades.append(item.name)
+			Globals.upgrades.append(item)
 			button.disabled = true
