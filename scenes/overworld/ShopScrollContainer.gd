@@ -12,7 +12,7 @@ func _ready():
 	
 	# add shop buttons
 	var file = File.new()
-	file.open("res://scenes/overworld/shop.tres", File.READ)
+	file.open("res://scenes/overworld/shop.yaml.tres", File.READ)
 	var shop_items = file.get_as_text()
 	file.close()
 	shop_items = yaml.parse(shop_items).result

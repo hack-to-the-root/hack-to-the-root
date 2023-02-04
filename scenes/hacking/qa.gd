@@ -12,7 +12,7 @@ func _ready():
 	randomize()
 	var yaml = preload("res://addons/godot-yaml/gdyaml.gdns").new()
 	var file = File.new()
-	file.open("res://scenes/hacking/config.tres", File.READ)
+	file.open("res://scenes/hacking/config.yaml.tres", File.READ)
 	var config = file.get_as_text()
 	file.close()
 	config = yaml.parse(config).result
