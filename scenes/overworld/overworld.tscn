@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/overworld/ServerButton.gd" type="Script" id=1]
 [ext_resource path="res://scenes/overworld/overworld.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/overworld/pizza.png" type="Texture" id=5]
 [ext_resource path="res://assets/overworld/coffee-cup.png" type="Texture" id=6]
 [ext_resource path="res://assets/overworld/level-up.png" type="Texture" id=7]
+[ext_resource path="res://scenes/overworld/servermap/map.tscn" type="PackedScene" id=8]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
@@ -230,6 +231,12 @@ rect_min_size = Vector2( 0, 100 )
 script = ExtResource( 3 )
 
 [node name="ShopVBox" type="VBoxContainer" parent="VBoxContainer/ShopScrollContainer"]
+
+[node name="ServersContainer" parent="VBoxContainer" instance=ExtResource( 8 )]
+margin_top = 176.0
+margin_right = 1280.0
+margin_bottom = 716.0
+rect_min_size = Vector2( 0, 540 )
 
 [connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/MoneyCheatContainer/AddMoneyButton" to="." method="_on_AddMoneyButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/MoneyCheatContainer/RemoveMoneyButton" to="." method="_on_RemoveMoneyButton_pressed"]
