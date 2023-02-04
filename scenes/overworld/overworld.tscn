@@ -218,16 +218,16 @@ margin_bottom = 672.0
 
 [node name="ShopScrollContainer" type="ScrollContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
 margin_right = 300.0
-margin_bottom = 400.0
-rect_min_size = Vector2( 300, 400 )
+margin_bottom = 550.0
+rect_min_size = Vector2( 300, 550 )
 script = ExtResource( 3 )
 
 [node name="ShopVBox" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer/ShopScrollContainer"]
 
 [node name="ShopLabel" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
-margin_top = 404.0
+margin_top = 554.0
 margin_right = 300.0
-margin_bottom = 418.0
+margin_bottom = 568.0
 align = 1
 autowrap = true
 

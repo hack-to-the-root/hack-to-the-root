@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/scriptkiddie.png-16f0692fa83b460f68bd5bd17adb3972.stex"
+path="res://.import/phishing.png-467840bb84a33615d8d91c4e14aa62eb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/overworld/scriptkiddie.png"
-dest_files=[ "res://.import/scriptkiddie.png-16f0692fa83b460f68bd5bd17adb3972.stex" ]
+source_file="res://assets/overworld/phishing.png"
+dest_files=[ "res://.import/phishing.png-467840bb84a33615d8d91c4e14aa62eb.stex" ]
 
 [params]
 
