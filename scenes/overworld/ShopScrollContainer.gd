@@ -21,6 +21,7 @@ func _ready():
 		var button = Button.new()
 		button.set_size(Vector2(100, 50))
 		button.text = "$ " + str(item.costs) + " - " + item.display_name
+		button.icon = load("res://assets/overworld/" + item.icon)
 		button.connect("pressed", self, "_buy_item", [ button, item ])
 		button.connect("mouse_entered", self, "_on_button_mouse_entered", [ item ])
 		button.connect("mouse_exited", self, "_on_button_mouse_exited")

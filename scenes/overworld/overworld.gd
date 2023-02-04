@@ -22,8 +22,18 @@ func _ready():
 func _process(delta):
 	money_label.text = str(Globals.money)
 	level_label.text = str(Globals.level)
-	pizza_label.text = str(Globals.pizza)
-	coffee_label.text = str(Globals.coffee)
+	
+	pizza_label.text = "{pizza} (-{amount}/{interval}s)".format({
+		"pizza": Globals.pizza,
+		"amount": PIZZA_CONSUMPTION_AMOUNT,
+		"interval": PIZZA_CONSUMPTION_INTERVAL
+	})
+	
+	coffee_label.text = "{coffee} (-{amount}/{interval}s)".format({
+		"coffee": Globals.coffee,
+		"amount": COFFEE_CONSUMPTION_AMOUNT,
+		"interval": COFFEE_CONSUMPTION_INTERVAL
+	})
 	
 	consumeCoffeeAndPizzaIfNecessary(delta)
 	checkStarvation()

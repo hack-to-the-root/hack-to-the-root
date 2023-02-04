@@ -2,58 +2,70 @@
   display_name: Hacker food
   description: The one and only hacker food
   costs: 5
+  icon: delivery.png
 - name: coffee
   display_name: Hacker drink
   description: The fluid that keeps you going
   costs: 2
+  icon: barista.png
 
 - name: hoodie
   display_name: Hacker uniform
   description: This »Official Hacker Uniform«® hides you from prying eyes
   costs: 10
+  icon: hacker.png
   time_bonus: 5
 - name: vpn
   display_name: SouthVPN®
   description: Hide your tracks behind other peoples computers
   costs: 50
+  icon: vpn.png
   time_bonus: 20
 
 - name: bruteforce
   display_name: Bruteforce attack
   description: There are no wrong answers!
   costs: 20
+  icon: cybercrime.png
 
 - name: john
   display_name: John the Ripper
   description: Part of the script kiddie tool belt, speeds up your hacking
   costs: 30
+  icon: pizza.png
 
 - name: whiterabbit
   display_name: White Rabbit
   description: Follow the white Rabbit during your next hack, afterwards it leaves (single use)
   costs: 100
+  icon: pizza.png
   hint: true
 
 - name: "0day"
   display_name: Zero-day-exploit
   description: Widely unknown vulnerability that lets you skip minigames (single use)
   costs: 200
+  icon: virus.png
   joker: true
 - name: phishing
   display_name: Phishing campaign
   description: Get passwords and information to bypass firewalls (single use)
   costs: 200
+  icon: phishing.png
   joker: true
 
 - name: sqli
   display_name: SQL injection
   description: Use SQL injection to hack harder targets
   costs: 100
+  icon: pizza.png
 - name: privesc
   display_name: Privilege escalation
   description: Use privilege escalation to hack harder targets
   costs: 150
+  icon: privilege-escalation.png
 - name: rce
   display_name: Remote code execution
   description: Use remote code execution to hack harder targets
   costs: 200
+  icon: pizza.png
