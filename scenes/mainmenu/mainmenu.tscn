@@ -15,10 +15,11 @@ margin_bottom = 720.0
 alignment = 1
 
 [node name="ControlsContainer" type="VBoxContainer" parent="RootContainer/HBoxContainer"]
-margin_left = 511.0
-margin_right = 769.0
+margin_left = 190.0
+margin_right = 448.0
 margin_bottom = 720.0
 rect_min_size = Vector2( 258, 0 )
+rect_pivot_offset = Vector2( -1068, -270 )
 size_flags_horizontal = 6
 alignment = 1
 
@@ -41,15 +42,24 @@ margin_right = 258.0
 margin_bottom = 394.0
 text = "Exit"
 
-[node name="LogoContainer" type="Node2D" parent="RootContainer/HBoxContainer"]
-scale = Vector2( 0.5, 0.5 )
+[node name="ControlsContainer2" type="VBoxContainer" parent="RootContainer/HBoxContainer"]
+margin_left = 705.0
+margin_right = 1217.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 258, 0 )
+rect_pivot_offset = Vector2( -1068, -270 )
+size_flags_horizontal = 6
+alignment = 1
 
-[node name="LogoRect" type="TextureRect" parent="RootContainer/HBoxContainer/LogoContainer"]
-margin_left = 1404.0
-margin_top = 180.0
-margin_right = 2428.0
-margin_bottom = 1204.0
+[node name="LogoRect" type="TextureRect" parent="RootContainer/HBoxContainer/ControlsContainer2"]
+margin_top = 104.0
+margin_right = 512.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 512, 512 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = ExtResource( 1 )
+expand = true
 stretch_mode = 5
 
 [connection signal="pressed" from="RootContainer/HBoxContainer/ControlsContainer/StartButton" to="RootContainer/HBoxContainer/ControlsContainer/StartButton" method="_on_StartButton_pressed"]
