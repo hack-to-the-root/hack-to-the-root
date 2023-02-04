@@ -1,6 +1,5 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://scenes/overworld/ServerButton.gd" type="Script" id=1]
 [ext_resource path="res://scenes/overworld/overworld.gd" type="Script" id=2]
 [ext_resource path="res://scenes/overworld/ShopScrollContainer.gd" type="Script" id=3]
 [ext_resource path="res://assets/overworld/money-bag.png" type="Texture" id=4]
@@ -208,41 +207,30 @@ valign = 1
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 48.0
 margin_right = 1280.0
-margin_bottom = 68.0
+margin_bottom = 720.0
+size_flags_vertical = 3
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2"]
-margin_left = 594.0
-margin_right = 686.0
-margin_bottom = 20.0
-alignment = 1
-
-[node name="ServerButton" type="Button" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
-margin_right = 92.0
-margin_bottom = 20.0
-text = "Some Server"
-script = ExtResource( 1 )
-
-[node name="ShopScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
-margin_top = 72.0
-margin_right = 1280.0
-margin_bottom = 172.0
-rect_min_size = Vector2( 0, 100 )
+[node name="ShopScrollContainer" type="ScrollContainer" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 300.0
+margin_bottom = 672.0
+rect_min_size = Vector2( 300, 100 )
 script = ExtResource( 3 )
 
-[node name="ShopVBox" type="VBoxContainer" parent="VBoxContainer/ShopScrollContainer"]
+[node name="ShopVBox" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2/ShopScrollContainer"]
 
-[node name="ShopLabel" type="Label" parent="VBoxContainer"]
+[node name="ShopLabel" type="Label" parent="VBoxContainer/HBoxContainer2"]
 visible = false
-margin_top = 72.0
+margin_top = 24.0
 margin_right = 1280.0
-margin_bottom = 86.0
+margin_bottom = 38.0
 
-[node name="ServersContainer" parent="VBoxContainer" instance=ExtResource( 8 )]
-margin_top = 176.0
+[node name="ServersContainer" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 8 )]
+margin_left = 304.0
 margin_right = 1280.0
-margin_bottom = 716.0
-rect_min_size = Vector2( 0, 540 )
+margin_bottom = 672.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/MoneyCheatContainer/AddMoneyButton" to="." method="_on_AddMoneyButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/MoneyCheatContainer/RemoveMoneyButton" to="." method="_on_RemoveMoneyButton_pressed"]
@@ -252,4 +240,3 @@ rect_min_size = Vector2( 0, 540 )
 [connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/PizzaCheatContainer/RemovePizzaButton" to="." method="_on_RemovePizzaButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/CoffeeCheatContainer/AddCoffeeButton" to="." method="_on_AddCoffeeButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/GUI/GUIContainer/CheatContainer/CoffeeCheatContainer/RemoveCoffeeButton" to="." method="_on_RemoveCoffeeButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer2/VBoxContainer/ServerButton" to="VBoxContainer/HBoxContainer2/VBoxContainer/ServerButton" method="_on_ServerButton_pressed"]

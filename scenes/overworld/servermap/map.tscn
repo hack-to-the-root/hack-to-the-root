@@ -3,13 +3,13 @@
 [ext_resource path="res://scenes/overworld/servermap/server/server.tscn" type="PackedScene" id=1]
 
 [node name="ScrollContainer" type="ScrollContainer"]
-margin_right = 2048.0
+margin_right = 975.0
 margin_bottom = 1024.0
 
 [node name="Control" type="Control" parent="."]
-margin_right = 2048.0
+margin_right = 975.0
 margin_bottom = 1024.0
-rect_min_size = Vector2( 2048, 1024 )
+rect_min_size = Vector2( 975, 1024 )
 
 [node name="Button" parent="Control" instance=ExtResource( 1 )]
 margin_left = 350.0
@@ -36,25 +36,25 @@ margin_right = 508.0
 margin_bottom = 861.0
 
 [node name="Button5" parent="Control" instance=ExtResource( 1 )]
-margin_left = 1404.0
-margin_top = 114.0
-margin_right = 1480.0
-margin_bottom = 184.0
+margin_left = 546.0
+margin_top = 307.0
+margin_right = 622.0
+margin_bottom = 377.0
 
 [node name="Button6" parent="Control" instance=ExtResource( 1 )]
-margin_left = 928.0
-margin_top = 270.0
-margin_right = 1004.0
-margin_bottom = 340.0
+margin_left = 728.0
+margin_top = 176.0
+margin_right = 804.0
+margin_bottom = 246.0
 
 [node name="Button7" parent="Control" instance=ExtResource( 1 )]
-margin_left = 902.0
-margin_top = 558.0
-margin_right = 978.0
-margin_bottom = 628.0
+margin_left = 817.0
+margin_top = 522.0
+margin_right = 893.0
+margin_bottom = 592.0
 
 [node name="Button8" parent="Control" instance=ExtResource( 1 )]
-margin_left = 1415.0
-margin_top = 361.0
-margin_right = 1491.0
-margin_bottom = 431.0
+margin_left = 438.0
+margin_top = 475.0
+margin_right = 514.0
+margin_bottom = 545.0
