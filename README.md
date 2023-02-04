@@ -35,6 +35,7 @@ Thanks to [TradeByte](https://www.tradebyte.com/en) for providing the jam site.
 - [Cryptography icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/cryptography)
 - [Hacker icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/hacker)
 - [Sql icons created by SBTS2018 - Flaticon](https://www.flaticon.com/free-icons/sql)
+- [Bug icons created by juicy_fish - Flaticon](https://www.flaticon.com/free-icon/searching_4380764)
 - [Sounds created by @wyver9 - OpenGameArt](https://wyver9.bandcamp.com/)
 - [Sounds created by shiru8bit - OpenGameArt](https://opengameart.org/content/8-bit-chiptune-after-the-rain)
 - [Sounds created by megaPixelMusic - OpenGameArt](https://soundcloud.com/megapixelmusic)
