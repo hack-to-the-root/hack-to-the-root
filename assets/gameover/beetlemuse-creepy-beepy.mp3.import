@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/beetlemuse-creepy-beepy.mp3-4e67111722a36a5ee2882a935eae57f7.mp3str"
+
+[deps]
+
+source_file="res://assets/gameover/beetlemuse-creepy-beepy.mp3"
+dest_files=[ "res://.import/beetlemuse-creepy-beepy.mp3-4e67111722a36a5ee2882a935eae57f7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

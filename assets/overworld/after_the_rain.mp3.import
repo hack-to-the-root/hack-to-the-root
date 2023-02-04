@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/after_the_rain.mp3-2ca04cf5cd2b4c9ebbfe26103b11d68b.mp3str"
+
+[deps]
+
+source_file="res://assets/overworld/after_the_rain.mp3"
+dest_files=[ "res://.import/after_the_rain.mp3-2ca04cf5cd2b4c9ebbfe26103b11d68b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

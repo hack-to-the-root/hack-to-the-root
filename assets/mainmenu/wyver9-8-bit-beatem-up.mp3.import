@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/wyver9-8-bit-beatem-up.mp3-abe72b083045b0f396ebbb6853813a3f.mp3str"
+
+[deps]
+
+source_file="res://assets/mainmenu/wyver9-8-bit-beatem-up.mp3"
+dest_files=[ "res://.import/wyver9-8-bit-beatem-up.mp3-abe72b083045b0f396ebbb6853813a3f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
