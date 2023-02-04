@@ -28,8 +28,13 @@ func _ready():
 		'regex':
 			regexLabel.text = task['regex']
 			regex = RegEx.new()
-			regex.compile(task['regex'])
+			regex.compile("^" + task['regex'] + "$")
 			questionLabel.text = task['prompt']
+			
+
+func onSuccess():
+	yield(get_tree().create_timer(3.0), "timeout")
+	get_tree().change_scene("res://scenes/overworld/overworld.tscn")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -38,9 +43,12 @@ func _process(delta):
 		'scriptkiddie':
 			if(answerInput.text.length() >= task['required_characters']):
 				questionLabel.text = 'You are a super hacker!'
+				onSuccess()
 		'question':
 			if(answerInput.text.length() >= task['answer']):
 				questionLabel.text = 'Correct!'
+				onSuccess()
 		'regex':
 			if(regex.search(answerInput.text) != null):
 				questionLabel.text = 'Regex matches!'
+				onSuccess()
