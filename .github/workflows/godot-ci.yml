@@ -13,32 +13,24 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     container:
-      image: barichello/godot-ci:3.5.1
+      image: barichello/godot-ci:${GODOT_VERSION}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           lfs: true
       - name: Setup
         run: |
           mkdir -v -p ~/.local/share/godot/templates
           mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
-          wget -O- https://mirror.lewd.wtf/private/nintendo/switch/godot-switch-headless.tar.gz | tar xvzf -
-          mv godot-switch-v3.3.4-linux/3.3.4.stable/ ~/.local/share/godot/templates/
       - name: Build
         run: ./build.sh
       - name: Upload Artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
           name: all-builds
           path: dist/
-      # Installing rsync is needed in order to deploy to GitHub Pages. Without it, the build will fail.
-      - name: Install rsync 📚
-        run: |
-          apt-get update && apt-get install -y rsync
       - name: Deploy to GitHub Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: dist/ # The folder the action should deploy.
+          folder: dist/
