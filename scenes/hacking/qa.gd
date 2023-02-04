@@ -46,7 +46,7 @@ func _process(delta):
 				questionLabel.text = 'You are a super hacker!'
 				onSuccess()
 		'question':
-			if(answerInput.text == task['solution']):
+			if(answerInput.text == str(task['solution'])):
 				questionLabel.text = 'Correct!'
 				onSuccess()
 		'regex':
