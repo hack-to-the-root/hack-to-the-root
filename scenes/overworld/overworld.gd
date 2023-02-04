@@ -8,7 +8,22 @@ onready var coffee_label = get_node("VBoxContainer/GUI/GUIContainer/FoodContaine
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var yaml = preload("res://addons/godot-yaml/gdyaml.gdns").new()
+	
+	# add shop buttons
+	var file = File.new()
+	file.open("res://scenes/overworld/shop.yaml", File.READ)
+	var shop_items = file.get_as_text()
+	file.close()
+	shop_items = yaml.parse(shop_items).result
+	var shop_container = get_node("VBoxContainer/ShopScrollContainer/ShopVBox")
+	for item in shop_items:
+		var button = Button.new()
+		button.set_size(Vector2(100, 50))
+		button.text = item.display_name
+		shop_container.add_child(button)
+		print("added button " + item.name + " with display_name " + item.display_name)
+		print(button)
 
 
 func _process(delta):

@@ -1,0 +1,12 @@
+- name: hoodie
+  display_name: Hacker uniform
+  description: This »official hacker uniform«® hides you from prying eyes
+  costs: 10
+- name: pizza
+  display_name: Hacker food
+  description: The one and only hacker food
+  costs: 5
+- name: coffee
+  display_name: Hacker drink
+  description: The fluid that keeps you going
+  costs: 2
