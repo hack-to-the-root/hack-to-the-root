@@ -19,7 +19,7 @@ var finished = false
 func _ready():
 	timeout = Globals.task['timeout']
 	required_characters = Globals.task['required_characters']
-	dummy_source = load_dummy_source("res://scenes/hacking/scriptkiddie/dummy_source.rs")
+	dummy_source = load_dummy_source("res://scenes/hacking/scriptkiddie/dummy_source.rs.tres")
 	
 	prompt_label.text = "Start hacking!"
 	progress_label.text = "0%"
