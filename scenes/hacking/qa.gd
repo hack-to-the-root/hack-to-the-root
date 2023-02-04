@@ -47,9 +47,9 @@ func onSuccess():
 func _process(delta):
 	match task['type']:
 		'scriptkiddie':
-			if(answerInput.text.length() >= task['required_characters']):
-				questionLabel.text = 'You are a super hacker!'
-				onSuccess()
+			Globals.task = task
+			get_tree().change_scene("res://scenes/hacking/scriptkiddie/scriptkiddie.tscn")
+			
 		'question':
 			if(answerInput.text == str(task['solution'])):
 				questionLabel.text = 'Correct!'
