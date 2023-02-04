@@ -20,4 +20,6 @@ Thanks to [TradeByte](https://www.tradebyte.com/en) for providing the jam site.
 [![License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0)
 
 # Credits
-- [Coffee icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/coffee)
+- [Icons created by Freepik - Flaticon](https://www.flaticon.com/authors/freepik)
+- [Icons created by orvipixel - Flaticon](https://www.flaticon.com/authors/orvipixel)
+- [Icons created by Culmbio - Flaticon](https://www.flaticon.com/authors/culmbio)
