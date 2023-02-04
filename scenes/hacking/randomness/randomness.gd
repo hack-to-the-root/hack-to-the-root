@@ -26,8 +26,8 @@ var timeout
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	timeout = 10#Globals.task['timeout']
-	required_randomness = 500#Globals.task['required_randomness']
+	timeout = Globals.task['timeout']
+	required_randomness = Globals.task['required_randomness']
 	
 	prompt_label.text = "Generate randomness!"
 	progress_label.text = "0%"
