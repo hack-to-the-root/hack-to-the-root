@@ -52,3 +52,10 @@ func hasJoker():
 		if upgrade.has("joker") && upgrade.joker:
 			return upgrade.joker
 	return false
+
+
+func useJoker():
+	for upgrade in upgrades:
+		if upgrade.has("joker") && upgrade.joker:
+			upgrades.erase(upgrade)
+			break

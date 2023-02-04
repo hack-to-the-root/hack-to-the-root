@@ -54,4 +54,3 @@ func _buy_item(button, item):
 		_:
 			Globals.upgrades.append(item)
 			button.disabled = true
-			print(Globals.hasJoker())

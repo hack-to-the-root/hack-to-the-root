@@ -8,7 +8,7 @@
   costs: 2
 - name: hoodie
   display_name: Hacker uniform
-  description: This »official hacker uniform«® hides you from prying eyes
+  description: This »Official Hacker Uniform«® hides you from prying eyes
   costs: 10
   time_bonus: 5
 - name: vpn
@@ -18,6 +18,6 @@
   time_bonus: 20
 - name: "0day"
   display_name: Zero-day-exploit
-  description: Expensive but helpful
+  description: Widely unknown vulnerability that lets you skip minigames
   costs: 200
   joker: true
