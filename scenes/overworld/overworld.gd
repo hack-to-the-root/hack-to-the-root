@@ -3,7 +3,7 @@ extends Node
 const COFFEE_CONSUMPTION_INTERVAL = 12.3
 const COFFEE_CONSUMPTION_AMOUNT = 1
 
-const PIZZA_CONSUMPTION_INTERVAL = 25.1
+const PIZZA_CONSUMPTION_INTERVAL = 27.1
 const PIZZA_CONSUMPTION_AMOUNT = 1
 
 onready var money_label = get_node("VBoxContainer/GUI/GUIContainer/StatsContainer/MoneyContainer/Money/Background/Number")
