@@ -20,3 +20,4 @@
   display_name: Zero-day-exploit
   description: Expensive but helpful
   costs: 200
+  joker: true
