@@ -52,3 +52,4 @@ margin_top = 388.0
 margin_right = 512.0
 margin_bottom = 403.0
 fit_content_height = true
+scroll_following = true
