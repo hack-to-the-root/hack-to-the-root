@@ -10,6 +10,7 @@ var task = {}
 var scriptKiddieTasks = []
 var regexTasks = []
 var questionTasks = []
+var randomnessTasks = []
 
 func addMoney(amount):
 	money += amount
@@ -87,6 +88,8 @@ func initTasks():
 					questionTasks.append(c)
 				'regex':
 					regexTasks.append(c)
+				'randomness':
+					randomnessTasks.append(c)
 
 
 func setScriptKiddieTask():
@@ -99,3 +102,7 @@ func setRegexTask():
 
 func setQuestionTask():
 	task = questionTasks[randi() % questionTasks.size()]
+
+
+func setRandomnessTask():
+	task = randomnessTasks[randi() % randomnessTasks.size()]

@@ -3,27 +3,38 @@ extends Node
 const BASE_REWARD = 2.0
 const DIFFICULTY_MULTIPLIER = 0.5
 
+const FINGERPRINT = """
++--[ED25519 256]--+
+|      ..o        |
+|     . +         |
+|      O          |
+|     + =         |
+|   .o.. S        |
+|   .+=.  +   .   |
+|   ..+= . + oE .o|
+| .o .o+= oo+  =o.|
+| o=+.=Bo== .+= ..|
++----[SHA256]-----+
+"""
+
 onready var prompt_label = get_node("RootContainer/HBoxContainer/ControlsContainer/PromptLabel")
 onready var progress_label = get_node("RootContainer/HBoxContainer/ControlsContainer/ProgressLabel")
-onready var code_label = get_node("RootContainer/HBoxContainer/ControlsContainer/CodeLabel")
+onready var fingerprint_label = get_node("RootContainer/HBoxContainer/ControlsContainer/FingerprintLabel")
 
 var time_elapsed = 0
-var required_characters
-var keys_pressed = 0
+var required_randomness
+var randomness_generated = 0
+var progress = 0
 var timeout
-var dummy_source
 var finished = false
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	timeout = Globals.task['timeout']
-	required_characters = Globals.task['required_characters']
-	dummy_source = load_dummy_source("res://scenes/hacking/scriptkiddie/dummy_source.rs")
+	required_randomness = Globals.task['required_randomness']
 	
-	prompt_label.text = "Start hacking!"
+	prompt_label.text = "Generate randomness!"
 	progress_label.text = "0%"
-	code_label.text = ""
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,7 +42,7 @@ func _process(delta):
 	if finished:
 		return
 	
-	update_dummy_code()
+	update_fingerprint()
 	update_progress()
 	
 	time_elapsed += delta
@@ -40,35 +51,33 @@ func _process(delta):
 		finished = true
 		onFailure()
 		
-	if keys_pressed >= required_characters:
+	if randomness_generated >= required_randomness:
 		finished = true
 		onSuccess()
 	
 	
 func _input(event):
-	if (event is InputEventKey):
-		keys_pressed += 1
+	if (event is InputEventMouse):
+		randomness_generated += 1
 	
-	
-func load_dummy_source(path):
-	var file = File.new()
-	file.open(path, File.READ)
-	return file.get_as_text()
 
 func update_progress():
-	var percent = (float(keys_pressed) / float(required_characters)) * 100.0
+	progress = (float(randomness_generated) / float(required_randomness)) * 100.0
 	
-	if percent > 100:
-		percent = 100
+	if progress > 100:
+		progress = 100
 		
-	progress_label.text = str(int(percent)) + "%"
+	progress_label.text = str(int(progress)) + "%"
 	
+
+func update_fingerprint():
+	var chars = (float(FINGERPRINT.length()) / 100.0) * progress
+	var fingerprint = FINGERPRINT.substr(0, chars)
 	
-func update_dummy_code():
-	var characters = keys_pressed * 8
-	var current_dummy_code = dummy_source.substr(0, characters)
-	
-	code_label.text = current_dummy_code
+	if progress == 100:
+		fingerprint = FINGERPRINT
+		
+	fingerprint_label.text = fingerprint 
 	
 	
 func onSuccess():
@@ -78,10 +87,9 @@ func onSuccess():
 	
 
 func onFailure():
-	prompt_label.text = "You were not fast enough"
+	prompt_label.text = "You didn't generate enough randomness"
 	returnToOverworld()
 	
-
 	
 func returnToOverworld():
 	yield(get_tree().create_timer(3.0), "timeout")
