@@ -26,8 +26,6 @@ func _ready():
 		button.connect("mouse_entered", self, "_on_button_mouse_entered", [ item ])
 		button.connect("mouse_exited", self, "_on_button_mouse_exited")
 		shop_container.add_child(button)
-		print("added button " + item.name + " with display_name " + item.display_name)
-		print(button)
 
 func _on_button_mouse_entered(item):
 	var label = get_parent().get_node("ShopLabel")
