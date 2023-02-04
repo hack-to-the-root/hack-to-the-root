@@ -9,20 +9,8 @@ var regex
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	randomize()
-	var yaml = preload("res://addons/godot-yaml/gdyaml.gdns").new()
-	var file = File.new()
-	file.open("res://scenes/hacking/config.yaml.tres", File.READ)
-	var config = file.get_as_text()
-	file.close()
-	config = yaml.parse(config).result
-	var index = randi() % config.size()
-
-	task = config[index]
-
+	task = Globals.task
 	match task['type']:
-		'scriptkiddie':
-			questionLabel.text = 'HURRY UP! H4CK 7H3 5Y57T3M'
 		'question':
 			questionLabel.text = task['prompt']
 		'regex':
@@ -46,10 +34,6 @@ func onSuccess():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	match task['type']:
-		'scriptkiddie':
-			Globals.task = task
-			get_tree().change_scene("res://scenes/hacking/scriptkiddie/scriptkiddie.tscn")
-			
 		'question':
 			if(answerInput.text == str(task['solution'])):
 				questionLabel.text = 'Correct!'

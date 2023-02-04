@@ -7,6 +7,10 @@ var coffee = 5
 var upgrades = []
 var task = {}
 
+var scriptKiddieTasks = []
+var regexTasks = []
+var questionTasks = []
+
 func addMoney(amount):
 	money += amount
 
@@ -63,3 +67,35 @@ func useFeature(feature):
 		if upgrade.has(feature) && upgrade[feature]:
 			upgrades.erase(upgrade)
 			break
+
+
+func initTasks():
+	if scriptKiddieTasks.empty() && regexTasks.empty() && questionTasks.empty():
+		randomize()
+		var yaml = preload("res://addons/godot-yaml/gdyaml.gdns").new()
+		var file = File.new()
+		file.open("res://scenes/hacking/config.yaml.tres", File.READ)
+		var config = file.get_as_text()
+		file.close()
+		config = yaml.parse(config).result
+		
+		for c in config:
+			match c['type']:
+				'scriptkiddie':
+					scriptKiddieTasks.append(c)
+				'question':
+					questionTasks.append(c)
+				'regex':
+					regexTasks.append(c)
+
+
+func setScriptKiddieTask():
+	task = scriptKiddieTasks[randi() % scriptKiddieTasks.size()]
+
+
+func setRegexTask():
+	task =  regexTasks[randi() % regexTasks.size()]
+
+
+func setQuestionTask():
+	task = questionTasks[randi() % questionTasks.size()]
