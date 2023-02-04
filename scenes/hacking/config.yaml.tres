@@ -89,7 +89,7 @@
 - type: regex
   difficulty: 2
   prompt: What's the time?
-  regex: [0-9]\\d:[:digit:]{2}
+  regex: ([0-9]\d:[\d]{2})
 
 - type: regex
   difficulty: 2
