@@ -1,12 +1,13 @@
-- type: choice
+- type: question
   difficulty: 5
   timeout: 10
-  prompt: You found an archive that seems to may contain sensitive data. Which of the commands will extract it?
-  choices:
-    a: tar -xzf archive.tar.gz
-    b: echo archive.tar.gz | unpack
-    c: untar archive.tar.gz
-    d: mv archive.tar.gz unpacked
+  prompt: |
+    You found an archive that seems to may contain sensitive data. Which of the commands will extract it?
+
+      a: tar -xzf archive.tar.gz
+      b: echo archive.tar.gz | unpack
+      c: untar archive.tar.gz
+      d: mv archive.tar.gz unpacked
   solution: a
 
 - type: question
