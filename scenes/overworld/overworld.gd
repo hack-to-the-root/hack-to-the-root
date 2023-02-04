@@ -43,6 +43,7 @@ func consumeCoffeeAndPizzaIfNecessary(delta):
 
 func checkStarvation():
 	if Globals.pizza <= 0 || Globals.coffee <= 0:
+		# warning-ignore:return_value_discarded
 		get_tree().change_scene("res://scenes/gameover/gameover.tscn")
 
 

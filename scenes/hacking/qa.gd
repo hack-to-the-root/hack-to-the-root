@@ -38,12 +38,13 @@ func onSuccess():
 	yield(get_tree().create_timer(3.0), "timeout")
 
 	Globals.addMoney(15 * task['difficulty'])
+	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/overworld/overworld.tscn")
 	
 	get_tree().paused = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process():
 	match task['type']:
 		'scriptkiddie':
 			if(answerInput.text.length() >= task['required_characters']):

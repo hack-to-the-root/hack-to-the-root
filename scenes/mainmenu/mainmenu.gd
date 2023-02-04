@@ -17,6 +17,7 @@ func _ready():
 
 
 func _on_StartButton_pressed():
+	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/overworld/overworld.tscn")
 
 
@@ -26,6 +27,7 @@ func _on_HelpButton_pressed():
 
 
 func _on_CreditsButton_pressed():
+	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/credits/credits.tscn")
 
 
