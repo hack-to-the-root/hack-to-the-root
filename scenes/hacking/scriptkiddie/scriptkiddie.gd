@@ -1,5 +1,8 @@
 extends Node
 
+const BASE_REWARD = 2.0
+const DIFFICULTY_MULTIPLIER = 0.5
+
 onready var prompt_label = get_node("RootContainer/HBoxContainer/ControlsContainer/PromptLabel")
 onready var progress_label = get_node("RootContainer/HBoxContainer/ControlsContainer/ProgressLabel")
 onready var code_label = get_node("RootContainer/HBoxContainer/ControlsContainer/CodeLabel")
@@ -9,6 +12,7 @@ var required_characters
 var keys_pressed = 0
 var timeout
 var dummy_source
+var finished = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -24,15 +28,20 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if finished:
+		return
+	
 	update_dummy_code()
 	update_progress()
 	
 	time_elapsed += delta
 	
 	if time_elapsed > timeout:
+		finished = true
 		onFailure()
 		
 	if keys_pressed >= required_characters:
+		finished = true
 		onSuccess()
 	
 	
@@ -64,6 +73,7 @@ func update_dummy_code():
 	
 func onSuccess():
 	prompt_label.text = "Success!"
+	Globals.addMoney(int(BASE_REWARD * DIFFICULTY_MULTIPLIER * Globals.task['difficulty']))
 	returnToOverworld()
 	
 

@@ -1,5 +1,8 @@
 extends Node
 
+const BASE_REWARD = 2.0
+const DIFFICULTY_MULTIPLIER = 0.5
+
 const FINGERPRINT = """
 +--[ED25519 256]--+
 |      ..o        |
@@ -23,6 +26,7 @@ var required_randomness
 var randomness_generated = 0
 var progress = 0
 var timeout
+var finished = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,15 +39,20 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if finished:
+		return
+	
 	update_fingerprint()
 	update_progress()
 	
 	time_elapsed += delta
 	
 	if time_elapsed > timeout:
+		finished = true
 		onFailure()
 		
 	if randomness_generated >= required_randomness:
+		finished = true
 		onSuccess()
 	
 	
@@ -73,6 +82,7 @@ func update_fingerprint():
 	
 func onSuccess():
 	prompt_label.text = "Success!"
+	Globals.addMoney(int(BASE_REWARD * DIFFICULTY_MULTIPLIER * Globals.task['difficulty']))
 	returnToOverworld()
 	
 
