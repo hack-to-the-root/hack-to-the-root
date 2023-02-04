@@ -20,7 +20,7 @@ func _ready():
 	for item in shop_items:
 		var button = Button.new()
 		button.set_size(Vector2(100, 50))
-		button.text = item.display_name
+		button.text = "$ " + str(item.costs) + " - " + item.display_name
 		button.connect("pressed", self, "_buy_item", [ button, item ])
 		button.connect("mouse_entered", self, "_on_button_mouse_entered", [ item ])
 		button.connect("mouse_exited", self, "_on_button_mouse_exited")
