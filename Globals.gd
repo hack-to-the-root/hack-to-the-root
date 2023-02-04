@@ -41,21 +41,24 @@ func removeCoffee(amount):
 func getTimeBonus():
 	var time = 0
 	for upgrade in upgrades:
-		if upgrade.has("joker"):
+		if upgrade.has("time_bonus"):
 			time += upgrade.time_bonus
 	return time
 
 
-func hasJoker():
-	var joker = false
+func hasFeature(feature):
 	for upgrade in upgrades:
-		if upgrade.has("joker") && upgrade.joker:
-			return upgrade.joker
+		if upgrade.name == feature:
+			return true
+		if upgrade.has(feature) && upgrade[feature]:
+			return true
 	return false
 
 
-func useJoker():
+func useFeature(feature):
+	if feature != "joker" && feature != "hint":
+		return
 	for upgrade in upgrades:
-		if upgrade.has("joker") && upgrade.joker:
+		if upgrade.has(feature) && upgrade[feature]:
 			upgrades.erase(upgrade)
 			break
