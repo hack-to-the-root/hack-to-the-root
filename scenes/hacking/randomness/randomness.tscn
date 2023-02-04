@@ -57,9 +57,14 @@ custom_fonts/normal_font = SubResource( 1 )
 fit_content_height = true
 
 [node name="FingerprintLabel" type="RichTextLabel" parent="RootContainer/HBoxContainer/ControlsContainer"]
+margin_left = 106.0
 margin_top = 389.0
-margin_right = 512.0
+margin_right = 406.0
 margin_bottom = 403.0
+grow_horizontal = 2
+rect_min_size = Vector2( 300, 0 )
+size_flags_horizontal = 6
+size_flags_vertical = 5
 theme = SubResource( 3 )
 fit_content_height = true
 scroll_following = true
