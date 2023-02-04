@@ -1,29 +1,44 @@
 extends Node2D
 
+onready var questionLabel = get_node("RootContainer/HBoxContainer/VBoxContainer/QuestionLabel")
+onready var answerInput = get_node("RootContainer/HBoxContainer/VBoxContainer/AnswerInput")
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-var question
-var answer
+var task
+var regex
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	question = get_node("question")
-	answer = get_node("answer")
-	
+	randomize()
 	var yaml = preload("res://addons/godot-yaml/gdyaml.gdns").new()
 	var file = File.new()
 	file.open("res://scenes/hacking/config.yaml", File.READ)
 	var config = file.get_as_text()
 	file.close()
 	config = yaml.parse(config).result
-	for line in config:
-		for question in line:
-			print(question)
+	var index = randi() % config.size()
 	
+	task = config[index]
+	
+	match task['type']:
+		'scriptkiddie':
+			questionLabel.text = 'HURRY UP! H4CK 7H3 5Y57T3M'
+		'question':
+			questionLabel.text = task['prompt']
+		'regex':
+			regex = RegEx.new()
+			regex.compile(task['regex'])
+			questionLabel.text = task['prompt']
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if answer.text == "42":
-		question.text = "Got it!"
+	match task['type']:
+		'scriptkiddie':
+			if(answerInput.text.length() >= task['required_characters']):
+				questionLabel.text = 'You are a super hacker!'
+		'question':
+			if(answerInput.text.length() >= task['answer']):
+				questionLabel.text = 'Correct!'
+		'regex':
+			if(regex.search(answerInput.text) != null):
+				questionLabel.text = 'Regex matches!'
