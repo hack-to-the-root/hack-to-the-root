@@ -13,20 +13,234 @@ margin_right = 975.0
 margin_bottom = 1024.0
 rect_min_size = Vector2( 975, 1024 )
 
-[node name="QuestionButton" parent="Control" instance=ExtResource( 3 )]
-margin_left = 221.0
-margin_top = 126.0
-margin_right = 297.0
-margin_bottom = 196.0
+[node name="Line2D" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 301, 46, 299, 225 )
 
-[node name="RegexButton" parent="Control" instance=ExtResource( 2 )]
-margin_left = 440.0
-margin_top = 117.0
-margin_right = 516.0
-margin_bottom = 187.0
+[node name="Line2D2" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 295, 236, 138, 279 )
 
-[node name="ScriptKiddieButton" parent="Control" instance=ExtResource( 1 )]
-margin_left = 348.0
-margin_top = 242.0
-margin_right = 424.0
-margin_bottom = 312.0
+[node name="Line2D3" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 298, 219, 473, 354 )
+
+[node name="Line2D4" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 499, 358, 669, 402 )
+
+[node name="Line2D5" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 141, 268, 209, 586 )
+
+[node name="Line2D6" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 302, 226, 281, 407 )
+
+[node name="Line2D7" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 205, 589, 349, 687 )
+
+[node name="Line2D8" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 281, 433, 384, 486 )
+
+[node name="Line2D9" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 413, 496, 356, 688 )
+
+[node name="Line2D10" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 346, 690, 526, 817 )
+
+[node name="Line2D11" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 528, 814, 529, 968 )
+
+[node name="Line2D12" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 543, 42, 539, 210 )
+
+[node name="Line2D13" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 548, 220, 483, 353 )
+
+[node name="Line2D14" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 473, 371, 401, 487 )
+
+[node name="Line2D15" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 671, 415, 673, 569 )
+
+[node name="Line2D16" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 779, 67, 703, 235 )
+
+[node name="Line2D17" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 793, 69, 851, 289 )
+
+[node name="Line2D18" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 697, 263, 667, 391 )
+
+[node name="Line2D19" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 863, 279, 833, 485 )
+
+[node name="Line2D20" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 657, 417, 399, 493 )
+
+[node name="Line2D21" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 399, 495, 677, 581 )
+
+[node name="Line2D22" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 681, 581, 753, 725 )
+
+[node name="Line2D23" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 849, 295, 673, 397 )
+
+[node name="Line2D24" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 815, 503, 741, 733 )
+
+[node name="Line2D25" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 753, 743, 529, 811 )
+
+[node name="Line2D26" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 301, 43, 407, 153 )
+
+[node name="Line2D27" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 535, 61, 399, 145 )
+
+[node name="Line2D28" type="Line2D" parent="Control"]
+z_index = -1
+points = PoolVector2Array( 407, 147, 477, 361 )
+
+[node name="QuestionButton4" parent="Control" instance=ExtResource( 3 )]
+margin_left = 303.0
+margin_top = 656.0
+margin_right = 379.0
+margin_bottom = 726.0
+
+[node name="RegexButton4" parent="Control" instance=ExtResource( 2 )]
+margin_left = 364.0
+margin_top = 116.0
+margin_right = 440.0
+margin_bottom = 186.0
+
+[node name="QuestionButton5" parent="Control" instance=ExtResource( 3 )]
+margin_left = 712.0
+margin_top = 695.0
+margin_right = 788.0
+margin_bottom = 765.0
+
+[node name="RegexButton5" parent="Control" instance=ExtResource( 2 )]
+margin_left = 486.0
+margin_top = 782.0
+margin_right = 562.0
+margin_bottom = 852.0
+
+[node name="ScriptKiddieButton5" parent="Control" instance=ExtResource( 1 )]
+margin_left = 638.0
+margin_top = 538.0
+margin_right = 714.0
+margin_bottom = 608.0
+
+[node name="QuestionButton6" parent="Control" instance=ExtResource( 3 )]
+margin_left = 623.0
+margin_top = 368.0
+margin_right = 699.0
+margin_bottom = 438.0
+
+[node name="RegexButton6" parent="Control" instance=ExtResource( 2 )]
+margin_left = 357.0
+margin_top = 458.0
+margin_right = 433.0
+margin_bottom = 528.0
+
+[node name="ScriptKiddieButton6" parent="Control" instance=ExtResource( 1 )]
+margin_left = 482.0
+margin_top = 931.0
+margin_right = 558.0
+margin_bottom = 1001.0
+
+[node name="QuestionButton7" parent="Control" instance=ExtResource( 3 )]
+margin_left = 653.0
+margin_top = 212.0
+margin_right = 729.0
+margin_bottom = 282.0
+
+[node name="RegexButton7" parent="Control" instance=ExtResource( 2 )]
+margin_left = 104.0
+margin_top = 233.0
+margin_right = 180.0
+margin_bottom = 303.0
+
+[node name="ScriptKiddieButton7" parent="Control" instance=ExtResource( 1 )]
+margin_left = 166.0
+margin_top = 555.0
+margin_right = 242.0
+margin_bottom = 625.0
+
+[node name="QuestionButton8" parent="Control" instance=ExtResource( 3 )]
+margin_left = 240.0
+margin_top = 393.0
+margin_right = 316.0
+margin_bottom = 463.0
+
+[node name="RegexButton8" parent="Control" instance=ExtResource( 2 )]
+margin_left = 810.0
+margin_top = 251.0
+margin_right = 886.0
+margin_bottom = 321.0
+
+[node name="ScriptKiddieButton8" parent="Control" instance=ExtResource( 1 )]
+margin_left = 787.0
+margin_top = 456.0
+margin_right = 863.0
+margin_bottom = 526.0
+
+[node name="QuestionButton9" parent="Control" instance=ExtResource( 3 )]
+margin_left = 259.0
+margin_top = 192.0
+margin_right = 335.0
+margin_bottom = 262.0
+
+[node name="RegexButton9" parent="Control" instance=ExtResource( 2 )]
+margin_left = 436.0
+margin_top = 323.0
+margin_right = 512.0
+margin_bottom = 393.0
+
+[node name="ScriptKiddieButton9" parent="Control" instance=ExtResource( 1 )]
+margin_left = 504.0
+margin_top = 180.0
+margin_right = 580.0
+margin_bottom = 250.0
+
+[node name="QuestionButton10" parent="Control" instance=ExtResource( 3 )]
+margin_left = 496.0
+margin_top = 10.0
+margin_right = 572.0
+margin_bottom = 80.0
+
+[node name="RegexButton10" parent="Control" instance=ExtResource( 2 )]
+margin_left = 734.0
+margin_top = 23.0
+margin_right = 810.0
+margin_bottom = 93.0
+
+[node name="ScriptKiddieButton10" parent="Control" instance=ExtResource( 1 )]
+margin_left = 262.0
+margin_top = 13.0
+margin_right = 338.0
+margin_bottom = 83.0
