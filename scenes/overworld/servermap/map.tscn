@@ -272,6 +272,7 @@ margin_bottom = 127.0
 disabled = true
 
 [node name="Node2D" type="Node2D" parent="."]
+visible = false
 z_index = -2
 
 [node name="TextureRect" type="TextureRect" parent="Node2D"]
