@@ -44,6 +44,7 @@ func _process(delta):
 	
 	consumeCoffeeAndPizzaIfNecessary(delta)
 	checkStarvation()
+	checkWinCondition()
 	
 	
 func consumeCoffeeAndPizzaIfNecessary(delta):
@@ -64,6 +65,12 @@ func checkStarvation():
 	if Globals.pizza <= 0 || Globals.coffee <= 0:
 		# warning-ignore:return_value_discarded
 		get_tree().change_scene("res://scenes/gameover/gameover.tscn")
+		
+
+func checkWinCondition():
+	if Globals.progress['Server28']['finished']:
+		yield(get_tree().create_timer(3.0), "timeout")
+		get_tree().change_scene("res://scenes/completed/completed.tscn")
 
 
 func _on_AddMoneyButton_pressed():
