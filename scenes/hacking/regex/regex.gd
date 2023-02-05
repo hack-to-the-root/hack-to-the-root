@@ -84,6 +84,7 @@ func disable_input():
 	input_disabled = true
 	answer_input.editable = false
 	submit_button.disabled = true
+	skip_button.disabled = true
 	
 
 func enable_input():

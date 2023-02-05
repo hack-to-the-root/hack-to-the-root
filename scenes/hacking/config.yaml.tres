@@ -209,7 +209,7 @@
       d: /etc/id
       e: /etc/home
   solution: c
-  hint: TODO
+  hint: Historically the file was used for passwords as well
 
 - type: question
   difficulty: 2
@@ -223,6 +223,19 @@
       d: /etc/id
   solution: b
   hint: The passwd file is usually not used to store passwords
+
+- type: question
+  difficulty: 2
+  timeout: 10
+  prompt: |
+    You know that the server is rebooting every 24 hours. With which command can you check how long the server has been running for?
+
+      a: cd chown
+      b: serverstatus
+      c: downtime
+      d: uptime
+  solution: d
+  hint: You're looking for the system uptime
 
 - type: scriptkiddie
   difficulty: 2
