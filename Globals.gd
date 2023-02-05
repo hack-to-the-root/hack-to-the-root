@@ -13,6 +13,7 @@ var progressBasePath = "/root/Node2D/VBoxContainer/HBoxContainer2/ServersContain
 var progress = {
 	"Server1": {
 		"finished": false,
+		"success": false,
 		"enabled": true,
 		"unlocks": [
 			"Server4",
@@ -21,6 +22,7 @@ var progress = {
 	},
 	"Server2": {
 		"finished": false,
+		"success": false,
 		"enabled": true,
 		"unlocks": [
 			"Server4",
@@ -29,6 +31,7 @@ var progress = {
 	},
 	"Server3": {
 		"finished": false,
+		"success": false,
 		"enabled": true,
 		"unlocks": [
 			"Server8",
@@ -37,6 +40,7 @@ var progress = {
 	},
 	"Server4": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server11"
@@ -44,6 +48,7 @@ var progress = {
 	},
 	"Server5": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server13"
@@ -51,6 +56,7 @@ var progress = {
 	},
 	"Server6": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server5",
@@ -60,6 +66,7 @@ var progress = {
 	},
 	"Server7": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server11"
@@ -67,6 +74,7 @@ var progress = {
 	},
 	"Server8": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server12"
@@ -74,6 +82,7 @@ var progress = {
 	},
 	"Server9": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server12",
@@ -82,6 +91,7 @@ var progress = {
 	},
 	"Server10": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server14"
@@ -89,6 +99,7 @@ var progress = {
 	},
 	"Server11": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server12",
@@ -97,6 +108,7 @@ var progress = {
 	},
 	"Server12": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server14",
@@ -105,6 +117,7 @@ var progress = {
 	},
 	"Server13": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server17"
@@ -112,6 +125,7 @@ var progress = {
 	},
 	"Server14": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server17",
@@ -120,6 +134,7 @@ var progress = {
 	},
 	"Server15": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server18"
@@ -127,6 +142,7 @@ var progress = {
 	},
 	"Server16": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server18"
@@ -134,6 +150,7 @@ var progress = {
 	},
 	"Server17": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server19"
@@ -141,6 +158,7 @@ var progress = {
 	},
 	"Server18": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server19"
@@ -148,6 +166,7 @@ var progress = {
 	},
 	"Server19": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server20"
@@ -155,6 +174,7 @@ var progress = {
 	},
 	"Server20": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server21",
@@ -163,6 +183,7 @@ var progress = {
 	},
 	"Server21": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server22"
@@ -170,6 +191,7 @@ var progress = {
 	},
 	"Server22": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server23"
@@ -177,6 +199,7 @@ var progress = {
 	},
 	"Server23": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server28"
@@ -184,6 +207,7 @@ var progress = {
 	},
 	"Server24": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server25"
@@ -191,6 +215,7 @@ var progress = {
 	},
 	"Server25": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server26"
@@ -198,6 +223,7 @@ var progress = {
 	},
 	"Server26": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server27"
@@ -205,6 +231,7 @@ var progress = {
 	},
 	"Server27": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 			"Server28"
@@ -212,6 +239,7 @@ var progress = {
 	},
 	"Server28": {
 		"finished": false,
+		"success": false,
 		"enabled": false,
 		"unlocks": [
 		]
@@ -233,11 +261,18 @@ func setTaskOutcome(outcome):
 
 func loadButtonStates():
 	for button in progress:
-		get_node(progressBasePath + button).disabled = !progress[button]["enabled"]
+		var b = get_node(progressBasePath + button)
+		b.disabled = !progress[button]["enabled"]
+		if progress[button]["finished"]:
+			if progress[button]["success"]:
+				b.icon = load("res://assets/overworld/server-success.png")
+			else:
+				b.icon = load("res://assets/overworld/server-failure.png")
 
 
 func succeedTask():
 	progress[currentPath]["finished"] = true
+	progress[currentPath]["success"] = true
 	progress[currentPath]["enabled"] = false
 
 	for unlock in progress[currentPath]["unlocks"]:
