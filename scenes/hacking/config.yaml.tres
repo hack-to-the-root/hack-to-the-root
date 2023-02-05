@@ -328,7 +328,7 @@
 - type: randomness
   difficulty: 8
   timeout: 15
-  required_randomness: 1000
+  required_randomness: 860
 
 - type: question
   difficulty: 2
