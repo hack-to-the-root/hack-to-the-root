@@ -17,6 +17,11 @@ default_font = SubResource( 2 )
 
 [node name="Node2D" type="Node2D"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1281.0
+margin_bottom = 718.0
+color = Color( 0, 0, 0, 1 )
+
 [node name="RootContainer" type="MarginContainer" parent="."]
 margin_right = 1280.0
 margin_bottom = 720.0
