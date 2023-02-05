@@ -3,11 +3,11 @@ extends Node2D
 const BASE_REWARD = 2.0
 const DIFFICULTY_MULTIPLIER = 0.5
 	  
-onready var question_label = get_node("RootContainer/HBoxContainer/VBoxContainer/QuestionLabel")
-onready var regex_label = get_node("RootContainer/HBoxContainer/VBoxContainer/RegexLabel")
-onready var status_label = get_node("RootContainer/HBoxContainer/VBoxContainer/StatusLabel")
-onready var answer_input = get_node("RootContainer/HBoxContainer/VBoxContainer/AnswerInput")
-onready var submit_button = get_node("RootContainer/HBoxContainer/VBoxContainer/SubmitButton")
+onready var question_label = get_node("RootContainer/HBoxContainer/VBoxContainer/VBoxContainer/QuestionLabel")
+onready var regex_label = get_node("RootContainer/HBoxContainer/VBoxContainer/VBoxContainer/RegexLabel")
+onready var status_label = get_node("RootContainer/HBoxContainer/VBoxContainer/VBoxContainer/StatusLabel")
+onready var answer_input = get_node("RootContainer/HBoxContainer/VBoxContainer/VBoxContainer/AnswerInput")
+onready var submit_button = get_node("RootContainer/HBoxContainer/VBoxContainer/VBoxContainer/SubmitButton")
 
 var compiled_regex = RegEx.new()
 var attempts = 0
