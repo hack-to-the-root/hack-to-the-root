@@ -27,8 +27,7 @@ func _on_HelpButton_pressed():
 
 
 func _on_CreditsButton_pressed():
-	# warning-ignore:return_value_discarded
-	get_tree().change_scene("res://scenes/credits/credits.tscn")
+	OS.shell_open("https://github.com/hack-to-the-root/hack-to-the-root#credits")
 
 
 func _on_ExitButton_pressed():
