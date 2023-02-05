@@ -45,3 +45,4 @@ Thanks to [TradeByte](https://www.tradebyte.com/en) for providing the jam site.
 - [Sounds created by drummerman - Freesound](https://freesound.org/people/drummerman/sounds/368129/)
 - [Font created by Seba Perez - dafont.com](https://www.dafont.com/de/8-bit-hud.font)
 - [Font created by Chequered Ink - dafont.com](https://www.dafont.com/de/bittypix-monospace.font)
+- [Icons created by Aldo Cervantes](https://www.flaticon.com/authors/aldo-cervantes)
