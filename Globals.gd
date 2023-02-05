@@ -1,7 +1,6 @@
 extends Node
 
 var money = 1000
-var level = 1
 var pizza = 5
 var coffee = 5
 var upgrades = []
@@ -199,14 +198,6 @@ func addMoney(amount):
 
 func removeMoney(amount):
 	money -= amount
-
-
-func addLevel(amount):
-	level += amount
-
-
-func removeLevel(amount):
-	level -= amount
 
 
 func addPizza(amount):
