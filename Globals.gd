@@ -272,6 +272,7 @@ func setScriptKiddieTask():
 
 func setRegexTask():
 	task =  regexTasks[randi() % regexTasks.size()]
+	regexTasks.erase(task)
 	task['attempts'] = 1
 	task['timeout'] += getTimeBonus()
 	
@@ -281,6 +282,7 @@ func setRegexTask():
 
 func setQuestionTask():
 	task = questionTasks[randi() % questionTasks.size()]
+	questionTasks.erase(task)
 	task['attempts'] = 1
 	task['timeout'] += getTimeBonus()
 	
