@@ -157,6 +157,63 @@ var progress = {
 		"finished": false,
 		"enabled": false,
 		"unlocks": [
+			"Server21",
+			"Server24"
+		]
+	},
+	"Server21": {
+		"finished": false,
+		"enabled": false,
+		"unlocks": [
+			"Server22"
+		]
+	},
+	"Server22": {
+		"finished": false,
+		"enabled": false,
+		"unlocks": [
+			"Server23"
+		]
+	},
+	"Server23": {
+		"finished": false,
+		"enabled": false,
+		"unlocks": [
+			"Server28"
+		]
+	},
+	"Server24": {
+		"finished": false,
+		"enabled": false,
+		"unlocks": [
+			"Server25"
+		]
+	},
+	"Server25": {
+		"finished": false,
+		"enabled": false,
+		"unlocks": [
+			"Server26"
+		]
+	},
+	"Server26": {
+		"finished": false,
+		"enabled": false,
+		"unlocks": [
+			"Server27"
+		]
+	},
+	"Server27": {
+		"finished": false,
+		"enabled": false,
+		"unlocks": [
+			"Server28"
+		]
+	},
+	"Server28": {
+		"finished": false,
+		"enabled": false,
+		"unlocks": [
 		]
 	},
 }
