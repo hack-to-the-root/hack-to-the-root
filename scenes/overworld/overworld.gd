@@ -7,7 +7,6 @@ const PIZZA_CONSUMPTION_INTERVAL = 27.1
 const PIZZA_CONSUMPTION_AMOUNT = 1
 
 onready var money_label = get_node("VBoxContainer/GUI/GUIContainer/StatsContainer/MoneyContainer/Money/Background/Number")
-onready var level_label = get_node("VBoxContainer/GUI/GUIContainer/StatsContainer/LevelContainer/Level/Background/Number")
 onready var pizza_label = get_node("VBoxContainer/GUI/GUIContainer/FoodContainer/PizzaContainer/Pizza/Background/Number")
 onready var coffee_label = get_node("VBoxContainer/GUI/GUIContainer/FoodContainer/CoffeeContainer/Coffee/Background/Number")
 
@@ -30,7 +29,6 @@ func _ready():
 
 func _process(delta):
 	money_label.text = str(Globals.money)
-	level_label.text = str(Globals.level)
 	
 	pizza_label.text = "{pizza} (-{amount}/{interval}s)".format({
 		"pizza": Globals.pizza,
@@ -74,14 +72,6 @@ func _on_AddMoneyButton_pressed():
 
 func _on_RemoveMoneyButton_pressed():
 	Globals.removeMoney(100)
-
-
-func _on_AddLevelButton_pressed():
-	Globals.addLevel(1)
-
-
-func _on_RemoveLevelButton_pressed():
-	Globals.removeLevel(1)
 
 
 func _on_AddPizzaButton_pressed():
