@@ -1,6 +1,6 @@
 extends Node
 
-var money = 1000
+var money = 0
 var pizza = 5
 var coffee = 5
 var upgrades = []

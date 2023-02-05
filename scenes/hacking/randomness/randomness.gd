@@ -1,6 +1,6 @@
 extends Node
 
-const BASE_REWARD = 2.0
+const BASE_REWARD = 20.0
 const DIFFICULTY_MULTIPLIER = 0.5
 
 const FINGERPRINT = """
