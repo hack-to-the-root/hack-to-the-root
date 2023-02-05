@@ -46,7 +46,7 @@
   difficulty: 2
   timeout: 10
   prompt: Who is spying on Alice and Bob?
-  solution: Eve
+  solution: "[Ee]ve"
   hint: This person is eavesdropping
 
 - type: question
@@ -63,14 +63,14 @@
   difficulty: 1
   timeout: 10
   prompt: During your hack you're stumbling upon a penguin. What is its name?
-  solution: Tux
+  solution: "[Tt]ux"
   hint: It's the mascot of Linux
 
 - type: question
   difficulty: 3
   timeout: 10
   prompt: Complete this sequence to get the poorly chosen password of the administrator: Buster, Bullseye, ...
-  solution: Bookworm
+  solution: "[Bb]ookworm"
   hint: They are Debian release names
 
 - type: question
@@ -105,28 +105,28 @@
   difficulty: 2
   timeout: 10
   prompt: After scanning the server you find port 443 open. What service is running by default on this port?
-  solution: HTTPS
+  solution: "(HTTPS|https|[Aa]pache|[Nn]ginx)"
   hint: It's the secure variant of the web protocol
 
 - type: question
   difficulty: 3
   timeout: 10
   prompt: After scanning the server you find port 22 open. What service is running by default on this port?
-  solution: SSH
+  solution: "(SSH|ssh)"
   hint: Get's you secure shell access
 
 - type: question
   difficulty: 4
   timeout: 10
   prompt: After scanning the server you find port 3306 open. What service is running by default on this port?
-  solution: MySQL
+  solution: "(MySQL|mysql|MariaDB|mariadb)"
   hint: A common database server
 
 - type: question
   difficulty: 4
   timeout: 10
   prompt: After scanning the server you find port 5432 open. What service is running by default on this port?
-  solution: PostgreSQL
+  solution: "(PostgreSQL|postgresql|Postgres|postgres)"
   hint: A slightly less common database server
 
 - type: question
