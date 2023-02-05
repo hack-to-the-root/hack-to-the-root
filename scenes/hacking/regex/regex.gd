@@ -8,6 +8,7 @@ onready var regex_label = get_node("RootContainer/HBoxContainer/VBoxContainer/VB
 onready var status_label = get_node("RootContainer/HBoxContainer/VBoxContainer/VBoxContainer/StatusLabel")
 onready var answer_input = get_node("RootContainer/HBoxContainer/VBoxContainer/VBoxContainer/AnswerInput")
 onready var submit_button = get_node("RootContainer/HBoxContainer/VBoxContainer/VBoxContainer/SubmitButton")
+onready var skip_button = get_node("RootContainer/HBoxContainer/VBoxContainer/VBoxContainer2/HBoxContainer/SkipButton")
 
 var compiled_regex = RegEx.new()
 var attempts = 0
@@ -23,6 +24,10 @@ func _ready():
 	compiled_regex.compile("^" + Globals.task['regex'] + "$")
 	submit_button.connect("pressed", self, "_button_pressed")
 	answer_input.grab_focus()
+	
+	if Globals.hasFeature("joker"):
+		skip_button.visible = true
+		skip_button.connect("pressed", self, "_skip_button_pressed")
 
 func _process(delta):
 	if finished:
@@ -57,6 +62,13 @@ func _process(delta):
 
 func _button_pressed():
 	submitted = true;
+
+	
+func _skip_button_pressed():
+	Globals.useFeature("joker")
+	finished = true
+	status_label.text = "skipped"
+	onSuccess()
 	
 
 func _input(event):
@@ -72,6 +84,7 @@ func disable_input():
 	input_disabled = true
 	answer_input.editable = false
 	submit_button.disabled = true
+	skip_button.disabled = true
 	
 
 func enable_input():

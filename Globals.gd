@@ -4,6 +4,7 @@ var money = 1000
 var pizza = 5
 var coffee = 5
 var upgrades = []
+var upgrades_out_of_stock = []
 var task = {}
 
 var taskOutcome = null

@@ -1,11 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/overworld/rabbit.png" type="Texture" id=1]
 [ext_resource path="res://assets/hacking/learning_with_computers .mp3" type="AudioStream" id=2]
 [ext_resource path="res://scenes/hacking/regex/regex.gd" type="Script" id=3]
+[ext_resource path="res://assets/hacking/matrix.png" type="Texture" id=4]
 
 [node name="regex" type="Node2D"]
 script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+texture = ExtResource( 4 )
 
 [node name="RootContainer" type="MarginContainer" parent="."]
 margin_right = 1280.0
@@ -25,64 +31,63 @@ alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="RootContainer/HBoxContainer/VBoxContainer"]
 margin_right = 512.0
-margin_bottom = 646.0
+margin_bottom = 716.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="QuestionLabel" type="RichTextLabel" parent="RootContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
-margin_top = 270.0
+margin_top = 305.0
 margin_right = 512.0
-margin_bottom = 285.0
+margin_bottom = 320.0
 grow_horizontal = 2
 rect_min_size = Vector2( 512, 0 )
 text = "Progress"
 fit_content_height = true
 
 [node name="RegexLabel" type="RichTextLabel" parent="RootContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
-margin_top = 289.0
+margin_top = 324.0
 margin_right = 512.0
-margin_bottom = 304.0
+margin_bottom = 339.0
 grow_horizontal = 2
 rect_min_size = Vector2( 512, 0 )
 text = "Progress"
 fit_content_height = true
 
 [node name="StatusLabel" type="RichTextLabel" parent="RootContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
-margin_top = 308.0
+margin_top = 343.0
 margin_right = 512.0
-margin_bottom = 323.0
+margin_bottom = 358.0
 grow_horizontal = 2
 rect_min_size = Vector2( 512, 0 )
 text = "Progress"
 fit_content_height = true
 
 [node name="AnswerInput" type="LineEdit" parent="RootContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
-margin_top = 327.0
+margin_top = 362.0
 margin_right = 512.0
-margin_bottom = 351.0
+margin_bottom = 386.0
 
 [node name="SubmitButton" type="Button" parent="RootContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
-margin_top = 355.0
+margin_top = 390.0
 margin_right = 512.0
-margin_bottom = 375.0
+margin_bottom = 410.0
 text = "Submit"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="RootContainer/HBoxContainer/VBoxContainer"]
-margin_left = 174.0
-margin_top = 650.0
-margin_right = 338.0
+margin_left = 256.0
+margin_top = 720.0
+margin_right = 256.0
 margin_bottom = 720.0
 size_flags_horizontal = 4
 size_flags_vertical = 5
 alignment = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="RootContainer/HBoxContainer/VBoxContainer/VBoxContainer2"]
-margin_right = 164.0
-margin_bottom = 70.0
 alignment = 2
 
 [node name="SkipButton" type="Button" parent="RootContainer/HBoxContainer/VBoxContainer/VBoxContainer2/HBoxContainer"]
+visible = false
 margin_right = 164.0
 margin_bottom = 70.0
 text = "Skip question"

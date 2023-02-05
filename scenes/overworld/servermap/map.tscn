@@ -173,11 +173,11 @@ margin_right = 580.0
 margin_bottom = 250.0
 disabled = true
 
-[node name="Server8" parent="Control" instance=ExtResource( 3 )]
-margin_left = 653.0
-margin_top = 212.0
-margin_right = 729.0
-margin_bottom = 282.0
+[node name="Server8" parent="Control" instance=ExtResource( 4 )]
+margin_left = 661.0
+margin_top = 216.0
+margin_right = 737.0
+margin_bottom = 286.0
 disabled = true
 
 [node name="Server9" parent="Control" instance=ExtResource( 2 )]
@@ -194,11 +194,11 @@ margin_right = 316.0
 margin_bottom = 463.0
 disabled = true
 
-[node name="Server11" parent="Control" instance=ExtResource( 2 )]
-margin_left = 436.0
-margin_top = 323.0
-margin_right = 512.0
-margin_bottom = 393.0
+[node name="Server11" parent="Control" instance=ExtResource( 4 )]
+margin_left = 440.0
+margin_top = 317.0
+margin_right = 516.0
+margin_bottom = 387.0
 disabled = true
 
 [node name="Server12" parent="Control" instance=ExtResource( 3 )]
@@ -262,11 +262,4 @@ margin_left = 482.0
 margin_top = 931.0
 margin_right = 558.0
 margin_bottom = 1001.0
-disabled = true
-
-[node name="EntropyButton" parent="Control" instance=ExtResource( 4 )]
-margin_left = 57.0
-margin_top = 57.0
-margin_right = 133.0
-margin_bottom = 127.0
 disabled = true

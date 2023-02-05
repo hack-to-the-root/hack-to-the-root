@@ -33,8 +33,8 @@ func _ready():
 	timeout = Globals.task['timeout']
 	required_randomness = Globals.task['required_randomness']
 	
-	prompt_label.text = "Generate randomness!"
-	progress_label.text = "0%"
+	prompt_label.bbcode_text = "[center]Generate randomness![/center]"
+	progress_label.bbcode_text = "[center]0%[/center]"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -67,7 +67,7 @@ func update_progress():
 	if progress > 100:
 		progress = 100
 		
-	progress_label.text = str(int(progress)) + "%"
+	progress_label.bbcode_text = "[center]" + str(int(progress)) + "%[/center]"
 	
 
 func update_fingerprint():
@@ -77,17 +77,17 @@ func update_fingerprint():
 	if progress == 100:
 		fingerprint = FINGERPRINT
 		
-	fingerprint_label.text = fingerprint 
+	fingerprint_label.bbcode_text = "[center]" + fingerprint + "[/center]"
 	
 	
 func onSuccess():
-	prompt_label.text = "Success!"
+	prompt_label.bbcode_text = "[center]Success![/center]"
 	Globals.addMoney(int(BASE_REWARD * DIFFICULTY_MULTIPLIER * Globals.task['difficulty']))
 	returnToOverworld()
 	
 
 func onFailure():
-	prompt_label.text = "You didn't generate enough randomness"
+	prompt_label.bbcode_text = "[center]You didn't generate enough randomness[center]"
 	returnToOverworld()
 	
 	
