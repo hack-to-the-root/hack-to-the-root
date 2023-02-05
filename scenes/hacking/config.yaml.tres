@@ -52,7 +52,10 @@
 - type: question
   difficulty: 3
   timeout: 10
-  prompt: "You're in! What is the output of this command line: # whoami"
+  prompt: |
+    You're in! What is the output of this command line:
+
+    # whoami
   solution: root
   hint: In bash $ and # symbolize certain permissions
 
