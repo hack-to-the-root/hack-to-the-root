@@ -25,6 +25,10 @@ func _ready():
 		button.connect("pressed", self, "_buy_item", [ button, item ])
 		button.connect("mouse_entered", self, "_on_button_mouse_entered", [ item ])
 		button.connect("mouse_exited", self, "_on_button_mouse_exited")
+		
+		if Globals.upgrades_out_of_stock.has(item.name):
+			button.disabled = true
+		
 		shop_container.add_child(button)
 
 func _on_button_mouse_entered(item):
@@ -41,7 +45,7 @@ func _on_button_mouse_exited():
 #	pass
 
 func _buy_item(button, item):
-	print("bying " + item.name + " for " + str(item.costs) + " credits")
+	print("buying " + item.name + " for " + str(item.costs) + " credits")
 	# check for sufficient funds
 	if item.costs > Globals.money:
 		print("not enough money to buy item: " + item.name)
@@ -52,4 +56,5 @@ func _buy_item(button, item):
 		"coffee": Globals.addCoffee(1)
 		_:
 			Globals.upgrades.append(item)
+			Globals.upgrades_out_of_stock.append(item.name)
 			button.disabled = true
