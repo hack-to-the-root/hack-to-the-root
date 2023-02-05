@@ -5,8 +5,7 @@
 Hack your way through all the servers to earn money, buy new skills and tools and don't forget to buy some food and drinks to stay healthy.
 
 ![](assets/screenshots/menu.png)
-![](assets/screenshots/game.png)
-![](assets/screenshots/hacking.png)
+<img src="assets/screenshots/game.png" width="50%" /><img src="assets/screenshots/hacking.png" width="50%" />
 
 This game was made for the [Global Game Jam 2023](https://globalgamejam.org/2023/games/h4ck-2-root-5) in 48 hours.
 
