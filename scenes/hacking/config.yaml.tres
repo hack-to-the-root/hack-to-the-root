@@ -57,7 +57,7 @@
 
     # whoami
   solution: root
-  hint: In bash $ and # symbolize certain permissions
+  hint: "In bash $ and # symbolize certain permissions"
 
 - type: question
   difficulty: 1
