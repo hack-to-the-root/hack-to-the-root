@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/overworld/after_the_rain.mp3" type="AudioStream" id=1]
 [ext_resource path="res://scenes/overworld/overworld.gd" type="Script" id=2]
@@ -10,9 +10,26 @@
 [ext_resource path="res://scenes/overworld/servermap/map.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/overworld/boyscontentclub-drinking.mp3" type="AudioStream" id=9]
 [ext_resource path="res://assets/overworld/drummerman-chewing.mp3" type="AudioStream" id=10]
+[ext_resource path="res://assets/overworld/background.png" type="Texture" id=11]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+modulate = Color( 0.388235, 0.388235, 0.388235, 0.533333 )
+light_mask = 0
+margin_right = 1280.0
+margin_bottom = 720.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer2"]
+margin_right = 1280.0
+margin_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 1280, 720 )
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 7
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 1280.0

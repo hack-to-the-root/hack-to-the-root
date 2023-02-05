@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/logo3.png-e61b209e57017019d85f18da65a80eee.stex"
+path="res://.import/background.png-04eb26cca29e548e7ccfcd655f71c9b6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mainmenu/logo3.png"
-dest_files=[ "res://.import/logo3.png-e61b209e57017019d85f18da65a80eee.stex" ]
+source_file="res://assets/overworld/background.png"
+dest_files=[ "res://.import/background.png-04eb26cca29e548e7ccfcd655f71c9b6.stex" ]
 
 [params]
 
