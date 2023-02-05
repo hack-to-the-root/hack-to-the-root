@@ -136,7 +136,7 @@
   solution: vim
   hint: I mean... it's obvious 😏
 
-- type question
+- type: question
   difficulty: 2
   timeout: 10
   prompt: What movie franchise are Debian release names based on?
