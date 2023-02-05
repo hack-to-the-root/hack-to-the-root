@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/8-bit-hud.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/mainmenu/logo.png" type="Texture" id=2]
-[ext_resource path="res://assets/gameover/beetlemuse-creepy-beepy.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/mainmenu/wyver9-8-bit-beatem-up.mp3" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 19
