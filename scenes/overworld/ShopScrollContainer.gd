@@ -18,6 +18,8 @@ func _ready():
 	shop_items = yaml.parse(shop_items).result
 	var shop_container = get_node("ShopVBox")
 	for item in shop_items:
+		if item.has("hide") && item["hide"]:
+			continue
 		var button = Button.new()
 		button.set_size(Vector2(100, 50))
 		button.text = "$ " + str(item.costs) + " - " + item.display_name

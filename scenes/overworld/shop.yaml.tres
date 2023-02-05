@@ -33,6 +33,7 @@
   description: Part of the script kiddie tool belt, speeds up your hacking
   costs: 30
   icon: sha-256.png
+  hide: true
 
 - name: whiterabbit
   display_name: White Rabbit
@@ -59,13 +60,16 @@
   description: Use SQL injection to hack harder targets
   costs: 100
   icon: sql.png
+  hide: true
 - name: privesc
   display_name: Privilege escalation
   description: Use privilege escalation to hack harder targets
   costs: 150
   icon: privilege-escalation.png
+  hide: true
 - name: rce
   display_name: Remote code execution
   description: Use remote code execution to hack harder targets
   costs: 200
   icon: hacker2.png
+  hide: true
