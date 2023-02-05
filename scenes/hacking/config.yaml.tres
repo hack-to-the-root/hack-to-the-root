@@ -136,6 +136,94 @@
   solution: vim
   hint: I mean... it's obvious 😏
 
+- type: question
+  difficulty: 2
+  timeout: 10
+  prompt: What movie franchise are Debian release names based on?
+  solution: Toy Story
+  hint: They are Pixar movies
+
+- type: question
+  difficulty: 2
+  timeout: 10
+  prompt: |
+    Which of the following commands can be used to create a file?
+
+      a: touch
+      b: build
+      c: nico
+      d: create
+      e: mkfile
+  solution: a
+  hint: Can't touch this
+
+- type: question
+  difficulty: 2
+  timeout: 10
+  prompt: |
+    You have to find the file passwd.txt in the /home directory. Which command do you use?
+
+      a: search /home -file passwd.txt
+      b: search /home passwd.txt
+      c: find /home -file passwd.txt
+      d: find /home -name passwd.txt
+      e: find /home passwd.txt
+  solution: c
+  hint: Find finds names
+
+- type: question
+  difficulty: 3
+  timeout: 10
+  prompt: |
+    The server uses the dpkg package manager. Which distrubution uses this tool?
+
+      a: Suse
+      b: Red Hat
+      c: Debian
+      d: Mandriva
+  solution: c
+  hint: Apt is a wrapper for dpkg
+
+- type: question
+  difficulty: 2
+  timeout: 10
+  prompt: |
+    The server has some hidden files. What is the first character in the file name that marks files hidden?
+
+      a: \
+      b: .
+      c: $
+      d: _
+  solution: b
+  hint: Hidden files are sometimes called dotfiles
+
+- type: question
+  difficulty: 1
+  timeout: 10
+  prompt: |
+    In which file can you find all users on the system?
+
+      a: /etc/secret
+      b: /ets/users
+      c: /etc/passwd
+      d: /etc/id
+      e: /etc/home
+  solution: c
+  hint: TODO
+
+- type: question
+  difficulty: 2
+  timeout: 10
+  prompt: |
+    Where are user passwords stored?
+
+      a: /etc/secret
+      b: /etc/shadow
+      c: /etc/passwd
+      d: /etc/id
+  solution: b
+  hint: The passwd file is usually not used to store passwords
+
 - type: scriptkiddie
   difficulty: 2
   timeout: 10

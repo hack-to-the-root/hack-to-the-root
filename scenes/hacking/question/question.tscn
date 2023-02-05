@@ -1,14 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/8-bit-hud.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/hacking/learning_with_computers .mp3" type="AudioStream" id=2]
 [ext_resource path="res://scenes/hacking/question/question.gd" type="Script" id=3]
 
-[sub_resource type="DynamicFont" id=1]
-size = 19
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
+[sub_resource type="Theme" id=1]
 
 [node name="question" type="Node2D"]
 script = ExtResource( 3 )
@@ -29,34 +24,34 @@ margin_bottom = 720.0
 alignment = 1
 
 [node name="QuestionLabel" type="RichTextLabel" parent="RootContainer/HBoxContainer/VBoxContainer"]
-margin_top = 300.0
+margin_top = 317.0
 margin_right = 512.0
 margin_bottom = 332.0
 grow_horizontal = 2
 rect_min_size = Vector2( 512, 0 )
-custom_fonts/normal_font = SubResource( 1 )
+theme = SubResource( 1 )
 text = "Progress"
 fit_content_height = true
 
 [node name="StatusLabel" type="RichTextLabel" parent="RootContainer/HBoxContainer/VBoxContainer"]
 margin_top = 336.0
 margin_right = 512.0
-margin_bottom = 368.0
+margin_bottom = 351.0
 grow_horizontal = 2
 rect_min_size = Vector2( 512, 0 )
-custom_fonts/normal_font = SubResource( 1 )
+theme = SubResource( 1 )
 text = "Progress"
 fit_content_height = true
 
 [node name="AnswerInput" type="LineEdit" parent="RootContainer/HBoxContainer/VBoxContainer"]
-margin_top = 372.0
+margin_top = 355.0
 margin_right = 512.0
-margin_bottom = 396.0
+margin_bottom = 379.0
 
 [node name="SubmitButton" type="Button" parent="RootContainer/HBoxContainer/VBoxContainer"]
-margin_top = 400.0
+margin_top = 383.0
 margin_right = 512.0
-margin_bottom = 420.0
+margin_bottom = 403.0
 text = "Submit"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
