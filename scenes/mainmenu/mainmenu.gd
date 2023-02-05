@@ -21,9 +21,9 @@ func _on_StartButton_pressed():
 	get_tree().change_scene("res://scenes/overworld/overworld.tscn")
 
 
-
 func _on_HelpButton_pressed():
-	pass # Replace with function body.
+	# warning-ignore:return_value_discarded
+	get_tree().change_scene("res://scenes/help/help.tscn")
 
 
 func _on_CreditsButton_pressed():

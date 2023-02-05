@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lphyper-computer-beeps.mp3-cd7d592f9eaad70fd091f9e0881b84cd.mp3str"
+
+[deps]
+
+source_file="res://assets/help/lphyper-computer-beeps.mp3"
+dest_files=[ "res://.import/lphyper-computer-beeps.mp3-cd7d592f9eaad70fd091f9e0881b84cd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

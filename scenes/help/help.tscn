@@ -1,0 +1,103 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/mainmenu/logo.png" type="Texture" id=1]
+[ext_resource path="res://assets/8-bit-hud.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/help/lphyper-computer-beeps.mp3" type="AudioStream" id=3]
+[ext_resource path="res://scenes/help/help.gd" type="Script" id=4]
+[ext_resource path="res://assets/Bittypix Monospace.otf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RootContainer" type="MarginContainer" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="RootContainer"]
+margin_right = 1280.0
+margin_bottom = 720.0
+alignment = 1
+
+[node name="ControlsContainer" type="VBoxContainer" parent="RootContainer/HBoxContainer"]
+margin_left = 69.0
+margin_right = 569.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 258, 0 )
+rect_pivot_offset = Vector2( -1068, -270 )
+size_flags_horizontal = 6
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootContainer/HBoxContainer/ControlsContainer"]
+margin_top = 189.0
+margin_right = 500.0
+margin_bottom = 493.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 500, 0 )
+custom_fonts/mono_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[code]
+Start at the top hacking the servers making your way through to the mainframe.
+
+
+The icons on the buttons give you a hint about the challenge that awaits you on that server.
+
+
+Don't forget to buy everything you need before starting to hack, so you don't run out of pizza of coffee.
+
+
+[/code]"
+text = "
+Start at the top hacking the servers making your way through to the mainframe.
+
+
+The icons on the buttons give you a hint about the challenge that awaits you on that server.
+
+
+Don't forget to buy everything you need before starting to hack, so you don't run out of pizza of coffee.
+
+
+"
+fit_content_height = true
+
+[node name="MenuButton" type="Button" parent="RootContainer/HBoxContainer/ControlsContainer"]
+margin_top = 497.0
+margin_right = 500.0
+margin_bottom = 530.0
+theme = SubResource( 3 )
+text = "back to menu"
+script = ExtResource( 4 )
+
+[node name="ControlsContainer2" type="VBoxContainer" parent="RootContainer/HBoxContainer"]
+margin_left = 705.0
+margin_right = 1217.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 258, 0 )
+rect_pivot_offset = Vector2( -1068, -270 )
+size_flags_horizontal = 6
+alignment = 1
+
+[node name="LogoRect" type="TextureRect" parent="RootContainer/HBoxContainer/ControlsContainer2"]
+margin_top = 104.0
+margin_right = 512.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 512, 512 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 5
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[connection signal="pressed" from="RootContainer/HBoxContainer/ControlsContainer/MenuButton" to="RootContainer/HBoxContainer/ControlsContainer/MenuButton" method="_on_MenuButton_pressed"]
