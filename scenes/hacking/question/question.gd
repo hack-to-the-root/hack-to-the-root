@@ -5,8 +5,12 @@ const DIFFICULTY_MULTIPLIER = 0.5
 	  
 onready var question_label = get_node("RootContainer/HBoxContainer/VBoxContainer/VBoxContainer/QuestionLabel")
 onready var status_label = get_node("RootContainer/HBoxContainer/VBoxContainer/VBoxContainer/StatusLabel")
+onready var hint_label = get_node("RootContainer/HBoxContainer/VBoxContainer/VBoxContainer/HintLabel")
 onready var answer_input = get_node("RootContainer/HBoxContainer/VBoxContainer/VBoxContainer/AnswerInput")
 onready var submit_button = get_node("RootContainer/HBoxContainer/VBoxContainer/VBoxContainer/SubmitButton")
+onready var skip_button = get_node("RootContainer/HBoxContainer/VBoxContainer/VBoxContainer2/HBoxContainer/SkipButton")
+onready var hint_button = get_node("RootContainer/HBoxContainer/VBoxContainer/VBoxContainer2/HBoxContainer/HintButton")
+
 
 var attempts = 0
 var time_elapsed = 0
@@ -21,6 +25,14 @@ func _ready():
 	regex.compile("^" + str(Globals.task['solution']) + "$")
 	submit_button.connect("pressed", self, "_button_pressed")
 	answer_input.grab_focus()
+	
+	if Globals.hasFeature("joker"):
+		skip_button.visible = true
+		skip_button.connect("pressed", self, "_skip_button_pressed")
+		
+	if Globals.hasFeature("hint"):
+		hint_button.visible = true
+		hint_button.connect("pressed", self, "_hint_button_pressed")
 
 func _process(delta):
 	if finished:
@@ -57,6 +69,20 @@ func _button_pressed():
 	submitted = true;
 
 
+func _skip_button_pressed():
+	Globals.useFeature("joker")
+	finished = true
+	status_label.text = "skipped"
+	onSuccess()
+	
+	
+func _hint_button_pressed():
+	Globals.useFeature("hint")
+	hint_label.text = Globals.task['hint']
+	hint_label.visible = true
+	hint_button.disabled = true
+
+
 func _input(event):
 	if finished || input_disabled:
 		return
@@ -70,12 +96,16 @@ func disable_input():
 	input_disabled = true
 	answer_input.editable = false
 	submit_button.disabled = true
+	hint_button.disabled = true
+	skip_button.disabled = true
 
 
 func enable_input():
 	input_disabled = false
 	answer_input.editable = true
 	submit_button.disabled = false
+	hint_button.disabled = false
+	skip_button.disabled = false
 
 
 func update_status():
