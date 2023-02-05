@@ -36,28 +36,34 @@ size_flags_horizontal = 6
 alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="RootContainer/HBoxContainer/ControlsContainer"]
-margin_top = 278.0
+margin_top = 214.0
 margin_right = 512.0
-margin_bottom = 342.0
+margin_bottom = 310.0
 grow_horizontal = 2
 custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
-bbcode_text = "[center]Game Completed[/center]
+bbcode_text = "[center]Game Completed
+[/center]
 "
 text = "Game Completed
+
 "
 fit_content_height = true
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="RootContainer/HBoxContainer/ControlsContainer"]
-margin_top = 346.0
+margin_top = 314.0
 margin_right = 512.0
-margin_bottom = 442.0
+margin_bottom = 506.0
 grow_horizontal = 2
 rect_min_size = Vector2( 512, 0 )
 custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
-bbcode_text = "[center]You reached to root of the network![center]"
-text = "You reached to root of the network!"
+bbcode_text = "[center]Congratulations,
+
+You hacked the mainframe and reached the root of the network![center]"
+text = "Congratulations,
+
+You hacked the mainframe and reached the root of the network!"
 fit_content_height = true
 
 [node name="ControlsContainer2" type="VBoxContainer" parent="RootContainer/HBoxContainer"]
