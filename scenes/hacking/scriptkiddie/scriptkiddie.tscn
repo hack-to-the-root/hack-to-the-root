@@ -45,6 +45,7 @@ margin_right = 512.0
 margin_bottom = 350.0
 grow_horizontal = 2
 custom_fonts/normal_font = SubResource( 1 )
+text = "Prompt"
 fit_content_height = true
 
 [node name="ProgressLabel" type="RichTextLabel" parent="RootContainer/HBoxContainer/ControlsContainer"]
@@ -54,6 +55,7 @@ margin_bottom = 386.0
 grow_horizontal = 2
 rect_min_size = Vector2( 512, 0 )
 custom_fonts/normal_font = SubResource( 1 )
+text = "Progress"
 fit_content_height = true
 
 [node name="CodeLabel" type="RichTextLabel" parent="RootContainer/HBoxContainer/ControlsContainer"]
@@ -61,6 +63,7 @@ margin_top = 390.0
 margin_right = 512.0
 margin_bottom = 402.0
 theme = SubResource( 3 )
+text = "Code"
 fit_content_height = true
 scroll_following = true
 

@@ -266,15 +266,27 @@ func initTasks():
 
 func setScriptKiddieTask():
 	task = scriptKiddieTasks[randi() % scriptKiddieTasks.size()]
+	task['timeout'] += getTimeBonus()
 
 
 func setRegexTask():
 	task =  regexTasks[randi() % regexTasks.size()]
-
+	task['attempts'] = 1
+	task['timeout'] += getTimeBonus()
+	
+	if hasFeature("bruteforce"):
+		task['attempts'] = -1
+		
 
 func setQuestionTask():
 	task = questionTasks[randi() % questionTasks.size()]
-
-
+	task['attempts'] = 1
+	task['timeout'] += getTimeBonus()
+	
+	if hasFeature("bruteforce"):
+		task['attempts'] = -1
+		
+	
 func setRandomnessTask():
 	task = randomnessTasks[randi() % randomnessTasks.size()]
+	task['timeout'] += getTimeBonus()
