@@ -30,7 +30,6 @@ func _ready():
 
 func _process(delta):
 	money_label.text = str(Globals.money)
-	level_label.text = str(Globals.level)
 	
 	pizza_label.text = "{pizza} (-{amount}/{interval}s)".format({
 		"pizza": Globals.pizza,
@@ -74,14 +73,6 @@ func _on_AddMoneyButton_pressed():
 
 func _on_RemoveMoneyButton_pressed():
 	Globals.removeMoney(100)
-
-
-func _on_AddLevelButton_pressed():
-	Globals.addLevel(1)
-
-
-func _on_RemoveLevelButton_pressed():
-	Globals.removeLevel(1)
 
 
 func _on_AddPizzaButton_pressed():
