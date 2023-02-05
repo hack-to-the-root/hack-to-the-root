@@ -9,6 +9,7 @@
       c: untar archive.tar.gz
       d: mv archive.tar.gz unpacked
   solution: a
+  hint: tar is an archiving program
 
 - type: question
   difficulty: 6
@@ -22,6 +23,7 @@
       return !!value
     };
   solution: 15
+  hint: Zero is considered false
 
 - type: question
   difficulty: 3
@@ -31,18 +33,105 @@
 
     fn (int input) => (input - 2) * 2
   solution: 23
+  hint: 42/2 + 2
 
 - type: question
   difficulty: 2
   timeout: 10
   prompt: What is the answer?
   solution: 42
+  hint: The Hitchhiker's Guide to the Galaxy
 
 - type: question
   difficulty: 2
   timeout: 10
   prompt: Who is spying on Alice and Bob?
   solution: Eve
+  hint: This person is eavesdropping
+
+- type: question
+  difficulty: 3
+  timeout: 10
+  prompt: "You're in! What is the output of this command line: # whoami"
+  solution: root
+  hint: In bash $ and # symbolize certain permissions
+
+- type: question
+  difficulty: 1
+  timeout: 10
+  prompt: During your hack you're stumbling upon a penguin. What is its name?
+  solution: Tux
+  hint: It's the mascot of Linux
+
+- type: question
+  difficulty: 3
+  timeout: 10
+  prompt: Complete this sequence to get the poorly chosen password of the administrator: Buster, Bullseye, ...
+  solution: Bookworm
+  hint: They are Debian release names
+
+- type: question
+  difficulty: 2
+  timeout: 10
+  prompt: This server has a vulnerable HTTPS server. What is the default port for this service?
+  solution: 443
+  hint: not HTTP
+
+- type: question
+  difficulty: 3
+  timeout: 10
+  prompt: This server has a vulnerable SSH server. What is the default port for this service?
+  solution: 22
+  hint: One of the lowest commonly used ports
+
+- type: question
+  difficulty: 4
+  timeout: 10
+  prompt: This server has a vulnerable MySQL server. What is the default port for this service?
+  solution: 3306
+  hint: 3v3r th0ught of a goo6 hint?
+
+- type: question
+  difficulty: 4
+  timeout: 10
+  prompt: This server has a vulnerable PostgreSQL server. What is the default port for this service?
+  solution: 5432
+  hint: Counting down...
+
+- type: question
+  difficulty: 2
+  timeout: 10
+  prompt: After scanning the server you find port 443 open. What service is running by default on this port?
+  solution: HTTPS
+  hint: It's the secure variant of the web protocol
+
+- type: question
+  difficulty: 3
+  timeout: 10
+  prompt: After scanning the server you find port 22 open. What service is running by default on this port?
+  solution: SSH
+  hint: Get's you secure shell access
+
+- type: question
+  difficulty: 4
+  timeout: 10
+  prompt: After scanning the server you find port 3306 open. What service is running by default on this port?
+  solution: MySQL
+  hint: A common database server
+
+- type: question
+  difficulty: 4
+  timeout: 10
+  prompt: After scanning the server you find port 5432 open. What service is running by default on this port?
+  solution: PostgreSQL
+  hint: A slightly less common database server
+
+- type: question
+  difficulty: 1
+  timeout: 10
+  prompt: emacs or vim?
+  solution: vim
+  hint: I mean... it's obvious 😏
 
 - type: scriptkiddie
   difficulty: 2
