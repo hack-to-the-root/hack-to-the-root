@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/matrix.png-95aba6ce83c0bd7ca3a6896ff9f8037d.stex"
+path="res://.import/matrix.png-09f707e9ff4f261aab8735974e240fcf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/servermap/matrix.png"
-dest_files=[ "res://.import/matrix.png-95aba6ce83c0bd7ca3a6896ff9f8037d.stex" ]
+source_file="res://assets/hacking/matrix.png"
+dest_files=[ "res://.import/matrix.png-09f707e9ff4f261aab8735974e240fcf.stex" ]
 
 [params]
 
