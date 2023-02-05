@@ -4,6 +4,8 @@ on:
     branches: [main]
   workflow_dispatch:
 
+concurrency: ci-${{ github.ref }}
+
 env:
   GODOT_VERSION: 3.5.1
   EXPORT_NAME: hack-to-the-root
